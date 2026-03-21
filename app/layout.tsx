@@ -23,6 +23,9 @@ export const metadata: Metadata = {
       "Expert-reviewed identity theft protection. Compare Aura, McAfee+, LifeLock side-by-side.",
     type: "article",
   },
+  other: {
+    "impact-site-verification": "58b2ec57-9c1e-46ce-a708-6294b94cdb47",
+  },
 };
 
 export default function RootLayout({
