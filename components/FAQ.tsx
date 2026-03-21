@@ -42,10 +42,10 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="max-w-4xl mx-auto px-4 py-10">
-      <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">
+      <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-2">
         Frequently Asked Questions
       </h2>
-      <p className="text-gray-500 text-sm mb-6">
+      <p className="text-gray-500 text-base mb-6">
         Common questions about identity theft protection services.
       </p>
 
@@ -60,7 +60,7 @@ export default function FAQ() {
               onClick={() => setOpen(open === i ? null : i)}
               aria-expanded={open === i}
             >
-              <span className="font-semibold text-sm text-[var(--foreground)] pr-4">
+              <span className="font-semibold text-base text-[var(--foreground)] pr-4">
                 {faq.q}
               </span>
               <svg
@@ -81,7 +81,7 @@ export default function FAQ() {
             </button>
             {open === i && (
               <div className="px-5 pb-4 pt-0">
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-base text-gray-600 leading-relaxed">
                   {faq.a}
                 </p>
               </div>

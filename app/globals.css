@@ -6,6 +6,8 @@
   --primary: #0d47a1;
   --primary-light: #e3f2fd;
   --accent: #1565c0;
+  --cta: #FF4A64;
+  --cta-hover: #E03350;
   --success: #2e7d32;
   --success-light: #e8f5e9;
   --warning: #f57f17;
@@ -36,6 +38,8 @@
   --color-danger: var(--danger);
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -44,6 +48,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 html {
@@ -109,40 +117,31 @@ html {
     line-height: 1.2 !important;
   }
 
-  /* Comparison table horizontal scroll hint */
   .overflow-x-auto {
     -webkit-overflow-scrolling: touch;
-  }
-
-  .overflow-x-auto::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 40px;
-    background: linear-gradient(to right, transparent, white);
-    pointer-events: none;
-  }
-
-  /* Stack pros/cons on mobile */
-  .grid.md\:grid-cols-2 {
-    gap: 1rem;
-  }
-
-  /* Tighter padding on cards */
-  article .px-6 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  article .py-6 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 }
 
 /* Smooth scroll offset for sticky header */
 [id] {
   scroll-margin-top: 4.5rem;
+}
+
+/* CTA button global style */
+.btn-cta {
+  background-color: var(--cta);
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-cta:hover {
+  background-color: var(--cta-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 74, 100, 0.3);
 }

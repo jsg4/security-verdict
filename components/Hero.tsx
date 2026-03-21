@@ -9,9 +9,10 @@ export default function Hero() {
             Independently Reviewed
           </p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--foreground)] leading-tight mb-4">
-            Best Identity Theft Protection Services of 2026
+            Best Identity Theft Protection Services of{" "}
+            <span className="text-[var(--cta)]">2026</span>
           </h1>
-          <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-6 max-w-2xl">
             We tested 12+ identity theft protection services over 200+ hours,
             evaluating credit monitoring, dark web surveillance, alert speed,
             insurance coverage, and real-world fraud resolution. Here are the

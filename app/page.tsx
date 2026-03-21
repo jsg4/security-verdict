@@ -28,7 +28,7 @@ export default function Home() {
         <ProductShowcase />
         <TableOfContents />
         <section id="reviews" className="max-w-4xl mx-auto px-4 py-8">
-          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-8">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-8">
             Detailed Reviews
           </h2>
           {products.map((product, i) => (

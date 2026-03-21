@@ -30,10 +30,10 @@ export default function HowWeEvaluate() {
   return (
     <section id="methodology" className="bg-[var(--gray-50)] py-10">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-2">
           How We Evaluate
         </h2>
-        <p className="text-sm text-gray-500 mb-6">
+        <p className="text-base text-gray-500 mb-6">
           Our Security Score is calculated across five weighted categories,
           based on hands-on testing and independent research.
         </p>

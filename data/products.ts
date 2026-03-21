@@ -6,6 +6,8 @@ export interface Product {
   score: number;
   stars: number;
   reviewCount: string;
+  ratingLabel: string;
+  discount?: string;
   badge?: string;
   tagline: string;
   url: string;
@@ -40,6 +42,8 @@ export const products: Product[] = [
     score: 9.6,
     stars: 4.5,
     reviewCount: "2,847",
+    ratingLabel: "Exceptional",
+    discount: "Save 25% on annual plans",
     badge: "Best Overall",
     tagline:
       "All-in-one identity protection with 3-bureau credit monitoring on every plan.",
@@ -92,6 +96,8 @@ export const products: Product[] = [
     score: 9.2,
     stars: 4.5,
     reviewCount: "4,312",
+    ratingLabel: "Excellent",
+    discount: "Save up to 68% — first year",
     badge: "Best Value Bundle",
     tagline:
       "World-class antivirus meets comprehensive identity protection — best all-in-one security suite.",
@@ -148,6 +154,8 @@ export const products: Product[] = [
     score: 9.0,
     stars: 4.0,
     reviewCount: "8,921",
+    ratingLabel: "Excellent",
+    discount: "30-day free trial available",
     tagline:
       "The most recognized name in identity protection with up to $3M in insurance coverage.",
     url: "#",
@@ -201,6 +209,8 @@ export const products: Product[] = [
     score: 8.7,
     stars: 4.0,
     reviewCount: "1,563",
+    ratingLabel: "Very Good",
+    discount: "Save 52% on annual plans",
     tagline:
       "IBM Watson AI-powered identity monitoring with affordable family plans.",
     url: "#",
@@ -252,6 +262,8 @@ export const products: Product[] = [
     score: 8.4,
     stars: 3.5,
     reviewCount: "3,204",
+    ratingLabel: "Good",
+    discount: "30-day free trial",
     tagline:
       "Direct from the credit bureau — the most authoritative credit monitoring available.",
     url: "#",

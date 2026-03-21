@@ -36,10 +36,10 @@ export default function ComparisonTable({ products }: { products: Product[] }) {
 
   return (
     <section id="comparison" className="max-w-5xl mx-auto px-4 py-10">
-      <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">
+      <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-2">
         Side-by-Side Comparison
       </h2>
-      <p className="text-gray-500 text-sm mb-6">
+      <p className="text-gray-500 text-base mb-6">
         Every feature, every plan, every price — at a glance.
       </p>
 
@@ -129,7 +129,7 @@ export default function ComparisonTable({ products }: { products: Product[] }) {
                     href={p.url}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
-                    className="inline-block bg-[var(--primary)] text-white text-xs font-bold px-4 py-2 rounded-lg hover:brightness-110 transition-all"
+                    className="btn-cta text-xs px-4 py-2.5 rounded-lg"
                   >
                     {p.ctaText}
                   </a>
