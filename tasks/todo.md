@@ -1,75 +1,48 @@
-# Multi-Category Affiliate Comparison Site — Architecture Plan
+# Trusted Scorecard — Project Status & Next Steps
 
-## Goal
-Refactor Trusted Scorecard from a single identity-theft page into a multi-category platform.
-Each category lives at its own URL (e.g., `/identity-protection`, `/credit-cards`, `/vpn`, `/insurance`)
-and reuses the same battle-tested comparison template.
+## Completed
+- [x] Initial identity-protection comparison page with 5 products
+- [x] All UI components: Hero, TopPicks, DetailedReview, ComparisonTable, FAQ, etc.
+- [x] Social proof: testimonials carousel, author bio, star ratings, score rings
+- [x] Coral CTA buttons, blue nav bar, discount callouts, rating labels
+- [x] Brand logos (SVG) for all products
+- [x] Real profile photos for author + testimonials
+- [x] Product marketing images from official sites
+- [x] Clickable review cards (entire article = affiliate link)
+- [x] Refactored to multi-category architecture (CategoryConfig system)
+- [x] Business Formation category (ZenBusiness, Northwest, LegalZoom, Tailor Brands, Rocket Lawyer)
+- [x] Online Therapy category (BetterHelp, Talkspace, Online-Therapy.com, Calmerry, Cerebral)
+- [x] Website Builders category (Wix, Squarespace, Shopify, Hostinger, WordPress.com)
+- [x] Homepage with category cards, social proof, "How It Works", reader reviews, trust banner
+- [x] Impact affiliate network verification meta tag
+- [x] Domain purchased (trustedscorecard.com) and DNS pointed to Vercel
+- [x] GitHub repo (jsg4/security-verdict) with auto-deploy
+- [x] Full project context saved to memory for future sessions
 
-## Architecture
+## In Progress
+- [ ] Product images for new categories (have ZenBusiness, BetterHelp, Wix — need ~12 more)
+- [ ] Vercel custom domain verification (DNS propagating)
 
-### Data Layer: `data/categories/[slug].ts`
-Each category file exports a `CategoryConfig` with:
-- **Category metadata**: title, slug, description, hero copy, accent color
-- **Products**: array of products (same `Product` interface, extended with category-specific fields)
-- **Testimonials**: array of testimonials specific to this category
-- **FAQ**: array of FAQ Q&A pairs
-- **Educational content**: sections of educational copy
-- **Stats**: threat/urgency stats for the banner
-- **Methodology**: scoring criteria and weights
-- **Author**: author info for this category
+## Next Steps — High Priority
+- [ ] Replace all `url: "#"` with real affiliate tracking links (after Impact/CJ approval)
+- [ ] Set up Voluum or RedTrack for conversion tracking
+- [ ] Configure Impact S2S postback → tracker → Meta CAPI
+- [ ] Create Meta Ads campaigns for each category
+- [ ] Create Google Search campaigns for high-intent keywords
+- [ ] Apply to individual affiliate programs (Aura, McAfee, BetterHelp, ZenBusiness, Wix, Squarespace, Shopify)
 
-### Routing: `app/[category]/page.tsx`
-Single dynamic route that:
-1. Reads the `[category]` param
-2. Loads the matching category config from `data/categories/`
-3. Passes all data to the same reusable components
-4. Generates static paths via `generateStaticParams()`
+## Next Steps — Categories
+- [ ] Credit Cards category (high payout but Meta Special Ad Category — Google-only)
+- [ ] Antivirus category
+- [ ] Gold IRA (Phase 2 — high payout, compliance-sensitive)
+- [ ] Solar Installation (Phase 2 — geo-limited)
 
-### Homepage: `app/page.tsx`
-Landing page showing all available categories with cards linking to each one.
-
-### Components — Already Reusable (just need props)
-- `Header` — add category nav dropdown
-- `Hero` — accepts: title, subtitle, badges, author
-- `SocialProof` — accepts: stats array
-- `Disclosure` — generic, no changes
-- `TopPicks` — already accepts products[]
-- `ProductShowcase` — accepts: title, features, mockup config
-- `DetailedReview` — already accepts product
-- `ComparisonTable` — already accepts products[], needs configurable rows
-- `ThreatBanner` — accepts: stats array, headline, CTA
-- `TestimonialCarousel` — accepts: testimonials array
-- `EducationalContent` — accepts: sections array
-- `HowWeEvaluate` — accepts: criteria array
-- `FAQ` — accepts: faq array
-- `AuthorBio` — accepts: author object
-- `Footer` — generic, no changes
-
-### Comparison Table Rows — Category-Specific
-Identity theft has: darkWebMonitoring, ssnMonitoring, creditLock, etc.
-Credit cards has: annualFee, rewardsRate, signUpBonus, etc.
-VPN has: serverCount, speed, noLogs, etc.
-
-Solution: Each category config defines its own `comparisonRows` array specifying
-which product fields to show and how to display them.
-
-## Planned Categories
-
-1. `/identity-protection` — current content (Aura, McAfee, LifeLock, etc.)
-2. `/credit-cards` — travel, cashback, balance transfer cards
-3. `/vpn` — NordVPN, Surfshark, ExpressVPN, etc.
-4. `/insurance` — life, home, auto, pet insurance
-5. `/antivirus` — McAfee, Norton, Bitdefender, etc.
-
-## Implementation Steps
-
-- [x] Write architecture plan
-- [ ] Create `CategoryConfig` type in `data/types.ts`
-- [ ] Refactor current identity-theft data into `data/categories/identity-protection.ts`
-- [ ] Make all hardcoded components accept props (Hero, SocialProof, ThreatBanner, TestimonialCarousel, EducationalContent, HowWeEvaluate, FAQ, AuthorBio, ProductShowcase)
-- [ ] Create `app/[category]/page.tsx` dynamic route
-- [ ] Create category index for `app/page.tsx` homepage
-- [ ] Update Header with category navigation
-- [ ] Add `generateStaticParams()` for SSG
-- [ ] Test build
-- [ ] Push and verify
+## Next Steps — Site Improvements
+- [ ] Add privacy policy page
+- [ ] Add terms of use page
+- [ ] Add detailed affiliate disclosure page
+- [ ] Add Google Analytics / GA4
+- [ ] Add sitemap.xml
+- [ ] Add robots.txt
+- [ ] Schema markup (FAQ, Review, Product) for rich snippets
+- [ ] OpenGraph images for social sharing
