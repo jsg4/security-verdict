@@ -1,4 +1,4 @@
-import Avatar from "./Avatar";
+import Image from "next/image";
 
 export default function AuthorBio({ variant = "inline" }: { variant?: "inline" | "full" }) {
   const VerifiedBadge = () => (
@@ -14,7 +14,14 @@ export default function AuthorBio({ variant = "inline" }: { variant?: "inline" |
   if (variant === "inline") {
     return (
       <div className="flex items-center gap-3">
-        <Avatar seed="Daniel Rosenberg" size={42} />
+        <Image
+          src="/photos/author.jpg"
+          alt="Daniel Rosenberg"
+          width={42}
+          height={42}
+          className="rounded-full object-cover flex-shrink-0"
+          style={{ width: 42, height: 42 }}
+        />
         <div>
           <div className="flex items-center gap-1">
             <span className="font-semibold text-sm text-[var(--foreground)]">
@@ -33,7 +40,14 @@ export default function AuthorBio({ variant = "inline" }: { variant?: "inline" |
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-5 mt-6">
       <div className="flex items-start gap-4">
-        <Avatar seed="Daniel Rosenberg" size={64} />
+        <Image
+          src="/photos/author.jpg"
+          alt="Daniel Rosenberg"
+          width={64}
+          height={64}
+          className="rounded-full object-cover flex-shrink-0"
+          style={{ width: 64, height: 64 }}
+        />
         <div className="flex-1">
           <div className="flex items-center gap-1.5 mb-1">
             <h4 className="font-bold text-[var(--foreground)]">

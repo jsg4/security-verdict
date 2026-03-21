@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Avatar from "./Avatar";
+import Image from "next/image";
 
 interface Testimonial {
   name: string;
   initials: string;
+  photo: string;
   location: string;
   rating: number;
   title: string;
@@ -19,6 +20,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Sarah M.",
     initials: "SM",
+    photo: "/photos/review-sarah.jpg",
     location: "Austin, TX",
     rating: 5,
     title: "Caught fraud before my bank did",
@@ -30,6 +32,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Michael R.",
     initials: "MR",
+    photo: "/photos/review-michael.jpg",
     location: "Denver, CO",
     rating: 5,
     title: "Worth every penny after the Ticketmaster breach",
@@ -41,6 +44,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Jennifer L.",
     initials: "JL",
+    photo: "/photos/review-jennifer.jpg",
     location: "Chicago, IL",
     rating: 5,
     title: "Replaced 3 separate subscriptions",
@@ -52,6 +56,7 @@ const testimonials: Testimonial[] = [
   {
     name: "David K.",
     initials: "DK",
+    photo: "/photos/review-david.jpg",
     location: "Seattle, WA",
     rating: 4,
     title: "Tax fraud caught before filing season",
@@ -63,6 +68,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Lisa T.",
     initials: "LT",
+    photo: "/photos/review-lisa.jpg",
     location: "Miami, FL",
     rating: 5,
     title: "Data broker removal actually works",
@@ -74,6 +80,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Robert A.",
     initials: "RA",
+    photo: "/photos/review-robert.jpg",
     location: "Phoenix, AZ",
     rating: 5,
     title: "Wish I had this before my identity was stolen",
@@ -85,6 +92,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Amanda C.",
     initials: "AC",
+    photo: "/photos/review-amanda.jpg",
     location: "Portland, OR",
     rating: 5,
     title: "Credit score went up 40 points",
@@ -96,6 +104,7 @@ const testimonials: Testimonial[] = [
   {
     name: "James W.",
     initials: "JW",
+    photo: "/photos/review-james.jpg",
     location: "Nashville, TN",
     rating: 4,
     title: "Set up the whole family in 10 minutes",
@@ -173,7 +182,14 @@ export default function TestimonialCarousel() {
             >
               {/* User header */}
               <div className="flex items-center gap-3 mb-3">
-                <Avatar seed={t.name} size={42} />
+                <Image
+                  src={t.photo}
+                  alt={t.name}
+                  width={42}
+                  height={42}
+                  className="rounded-full object-cover flex-shrink-0"
+                  style={{ width: 42, height: 42 }}
+                />
                 <div className="flex-1">
                   <div className="flex items-center gap-1.5">
                     <span className="font-semibold text-sm text-[var(--foreground)]">
