@@ -25,7 +25,7 @@ export default function Header() {
             </svg>
           </div>
           <span className="font-bold text-lg text-white hidden sm:block">
-            SecurityVerdict
+            Trusted Scorecard
           </span>
         </a>
 

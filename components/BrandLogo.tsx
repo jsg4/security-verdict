@@ -5,6 +5,13 @@ export default function BrandLogo({
   brand: string;
   size?: number;
 }) {
+  const squareStyle = {
+    width: size,
+    height: size,
+    minWidth: size,
+    minHeight: size,
+    aspectRatio: "1 / 1",
+  } as const;
   const logos: Record<string, { bg: string; text: string; label: string }> = {
     aura: { bg: "#6C5CE7", text: "#FFFFFF", label: "aura" },
     mcafee: { bg: "#C8102E", text: "#FFFFFF", label: "McAfee" },
@@ -19,8 +26,8 @@ export default function BrandLogo({
   if (brand === "aura") {
     return (
       <div
-        className="rounded-xl flex items-center justify-center shadow-sm"
-        style={{ width: size, height: size, backgroundColor: logo.bg }}
+        className="rounded-xl flex items-center justify-center shadow-sm flex-shrink-0"
+        style={{ ...squareStyle, backgroundColor: logo.bg }}
       >
         <svg viewBox="0 0 40 40" width={size * 0.6} height={size * 0.6}>
           <circle cx="20" cy="20" r="8" fill="none" stroke="white" strokeWidth="3" />
@@ -37,8 +44,8 @@ export default function BrandLogo({
   if (brand === "mcafee") {
     return (
       <div
-        className="rounded-xl flex items-center justify-center shadow-sm"
-        style={{ width: size, height: size, backgroundColor: logo.bg }}
+        className="rounded-xl flex items-center justify-center shadow-sm flex-shrink-0"
+        style={{ ...squareStyle, backgroundColor: logo.bg }}
       >
         <svg viewBox="0 0 40 40" width={size * 0.6} height={size * 0.6}>
           <path d="M20 6 L8 20 L20 34 L32 20 Z" fill="none" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
@@ -51,8 +58,8 @@ export default function BrandLogo({
   if (brand === "lifelock") {
     return (
       <div
-        className="rounded-xl flex items-center justify-center shadow-sm"
-        style={{ width: size, height: size, backgroundColor: logo.bg }}
+        className="rounded-xl flex items-center justify-center shadow-sm flex-shrink-0"
+        style={{ ...squareStyle, backgroundColor: logo.bg }}
       >
         <svg viewBox="0 0 40 40" width={size * 0.6} height={size * 0.6}>
           <rect x="14" y="18" width="12" height="10" rx="2" fill="none" stroke="#1A1A2E" strokeWidth="2.5" />
@@ -66,8 +73,8 @@ export default function BrandLogo({
   if (brand === "identity-guard") {
     return (
       <div
-        className="rounded-xl flex items-center justify-center shadow-sm"
-        style={{ width: size, height: size, backgroundColor: logo.bg }}
+        className="rounded-xl flex items-center justify-center shadow-sm flex-shrink-0"
+        style={{ ...squareStyle, backgroundColor: logo.bg }}
       >
         <svg viewBox="0 0 40 40" width={size * 0.6} height={size * 0.6}>
           <path d="M20 6 L32 12 V22 C32 28 27 33 20 36 C13 33 8 28 8 22 V12 L20 6Z" fill="none" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
@@ -80,8 +87,8 @@ export default function BrandLogo({
   if (brand === "experian") {
     return (
       <div
-        className="rounded-xl flex items-center justify-center shadow-sm"
-        style={{ width: size, height: size, backgroundColor: logo.bg }}
+        className="rounded-xl flex items-center justify-center shadow-sm flex-shrink-0"
+        style={{ ...squareStyle, backgroundColor: logo.bg }}
       >
         <svg viewBox="0 0 40 40" width={size * 0.6} height={size * 0.6}>
           <circle cx="20" cy="20" r="12" fill="none" stroke="white" strokeWidth="2.5" />
@@ -94,10 +101,9 @@ export default function BrandLogo({
   // Fallback
   return (
     <div
-      className="rounded-xl flex items-center justify-center shadow-sm font-bold text-sm"
+      className="rounded-xl flex items-center justify-center shadow-sm font-bold text-sm flex-shrink-0"
       style={{
-        width: size,
-        height: size,
+        ...squareStyle,
         backgroundColor: logo.bg,
         color: logo.text,
       }}

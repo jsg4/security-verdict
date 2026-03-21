@@ -21,7 +21,7 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="font-bold text-white text-sm">
-                SecurityVerdict
+                Trusted Scorecard
               </span>
             </div>
             <p className="text-xs text-gray-500 max-w-xs leading-relaxed">
@@ -81,7 +81,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-6">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <p className="text-[11px] text-gray-500">
-              &copy; {new Date().getFullYear()} SecurityVerdict. All rights
+              &copy; {new Date().getFullYear()} Trusted Scorecard. All rights
               reserved. All trademarks are property of their respective owners.
             </p>
             <p className="text-[11px] text-gray-500">

@@ -127,6 +127,14 @@ html {
   scroll-margin-top: 4.5rem;
 }
 
+/* Remove link styling from article wrappers */
+a.no-underline,
+a.no-underline:hover,
+a.no-underline:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* CTA button global style */
 .btn-cta {
   background-color: var(--cta);

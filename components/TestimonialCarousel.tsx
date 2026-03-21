@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Avatar from "./Avatar";
 
 interface Testimonial {
   name: string;
@@ -172,9 +173,7 @@ export default function TestimonialCarousel() {
             >
               {/* User header */}
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] flex items-center justify-center text-white text-xs font-bold">
-                  {t.initials}
-                </div>
+                <Avatar seed={t.name} size={42} />
                 <div className="flex-1">
                   <div className="flex items-center gap-1.5">
                     <span className="font-semibold text-sm text-[var(--foreground)]">
@@ -250,7 +249,7 @@ export default function TestimonialCarousel() {
             <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
             </svg>
-            All reviews verified by SecurityVerdict
+            All reviews verified by Trusted Scorecard
           </span>
           <span className="hidden sm:block">&middot;</span>
           <span>Reviews collected from product users and public review platforms</span>

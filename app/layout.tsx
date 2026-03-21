@@ -14,7 +14,7 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "Best Identity Theft Protection Services (2026) | Independently Reviewed",
+  title: "Best Identity Theft Protection Services (2026) | Trusted Scorecard",
   description:
     "We tested and compared 12+ identity theft protection services. See our expert rankings for Aura, McAfee+, LifeLock, and more — updated March 2026.",
   openGraph: {

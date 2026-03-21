@@ -1,4 +1,5 @@
 import { Product } from "@/data/products";
+import BrandLogo from "./BrandLogo";
 
 function Check() {
   return (
@@ -47,15 +48,16 @@ export default function ComparisonTable({ products }: { products: Product[] }) {
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-[var(--gray-50)] border-b border-gray-200">
-              <th className="text-left px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wide sticky left-0 bg-[var(--gray-50)] z-10 min-w-[140px]">
+              <th className="text-left px-4 py-4 text-xs font-bold text-gray-500 uppercase tracking-wide sticky left-0 bg-[var(--gray-50)] z-10 min-w-[140px]">
                 Feature
               </th>
               {products.map((p) => (
                 <th
                   key={p.slug}
-                  className="px-4 py-3 text-center min-w-[130px]"
+                  className="px-4 py-4 text-center min-w-[130px]"
                 >
-                  <div className="flex flex-col items-center gap-1">
+                  <div className="flex flex-col items-center gap-2">
+                    <BrandLogo brand={p.slug} size={36} />
                     <span className="font-bold text-[var(--foreground)] text-sm">
                       {p.name}
                     </span>
@@ -131,7 +133,7 @@ export default function ComparisonTable({ products }: { products: Product[] }) {
                     rel="noopener noreferrer nofollow"
                     className="btn-cta text-xs px-4 py-2.5 rounded-lg"
                   >
-                    {p.ctaText}
+                    Visit Site
                   </a>
                 </td>
               ))}

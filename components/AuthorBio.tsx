@@ -1,3 +1,5 @@
+import Avatar from "./Avatar";
+
 export default function AuthorBio({ variant = "inline" }: { variant?: "inline" | "full" }) {
   const VerifiedBadge = () => (
     <svg viewBox="0 0 24 24" className="w-4 h-4 text-[var(--primary)]" fill="currentColor">
@@ -12,10 +14,7 @@ export default function AuthorBio({ variant = "inline" }: { variant?: "inline" |
   if (variant === "inline") {
     return (
       <div className="flex items-center gap-3">
-        {/* Author avatar */}
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] flex items-center justify-center text-white font-bold text-sm shadow-md">
-          DR
-        </div>
+        <Avatar seed="Daniel Rosenberg" size={42} />
         <div>
           <div className="flex items-center gap-1">
             <span className="font-semibold text-sm text-[var(--foreground)]">
@@ -34,10 +33,7 @@ export default function AuthorBio({ variant = "inline" }: { variant?: "inline" |
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-5 mt-6">
       <div className="flex items-start gap-4">
-        {/* Author avatar - larger */}
-        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
-          DR
-        </div>
+        <Avatar seed="Daniel Rosenberg" size={64} />
         <div className="flex-1">
           <div className="flex items-center gap-1.5 mb-1">
             <h4 className="font-bold text-[var(--foreground)]">

@@ -28,9 +28,12 @@ export default function DetailedReview({
   rank: number;
 }) {
   return (
-    <article
+    <a
+      href={product.url}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      className="block mb-10 border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-all group no-underline text-inherit"
       id={product.slug}
-      className="mb-10 border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow"
     >
       {/* Header */}
       <div className="bg-[var(--gray-50)] border-b border-gray-200 px-4 sm:px-6 py-5">
@@ -257,19 +260,14 @@ export default function DetailedReview({
               </span>
             </div>
           </div>
-          <a
-            href={product.url}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="btn-cta px-10 py-4 text-base rounded-xl flex-shrink-0 shadow-lg"
-          >
+          <span className="btn-cta px-10 py-4 text-base rounded-xl flex-shrink-0 shadow-lg">
             Visit Site
             <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
             </svg>
-          </a>
+          </span>
         </div>
       </div>
-    </article>
+    </a>
   );
 }
