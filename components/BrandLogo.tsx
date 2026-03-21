@@ -13,11 +13,30 @@ export default function BrandLogo({
     aspectRatio: "1 / 1",
   } as const;
   const logos: Record<string, { bg: string; text: string; label: string }> = {
-    aura: { bg: "#6C5CE7", text: "#FFFFFF", label: "aura" },
+    // Identity Protection
+    aura: { bg: "#6C5CE7", text: "#FFFFFF", label: "Aura" },
     mcafee: { bg: "#C8102E", text: "#FFFFFF", label: "McAfee" },
     lifelock: { bg: "#FFC72C", text: "#1A1A2E", label: "LifeLock" },
     "identity-guard": { bg: "#00A4E4", text: "#FFFFFF", label: "ID Guard" },
     experian: { bg: "#1D4F91", text: "#FFFFFF", label: "Experian" },
+    // Business Formation
+    zenbusiness: { bg: "#FF6B35", text: "#FFFFFF", label: "ZB" },
+    northwest: { bg: "#1B4D3E", text: "#FFFFFF", label: "NW" },
+    legalzoom: { bg: "#00857C", text: "#FFFFFF", label: "LZ" },
+    "tailor-brands": { bg: "#384CFF", text: "#FFFFFF", label: "TB" },
+    "rocket-lawyer": { bg: "#E31837", text: "#FFFFFF", label: "RL" },
+    // Online Therapy
+    betterhelp: { bg: "#2E7D32", text: "#FFFFFF", label: "BH" },
+    talkspace: { bg: "#00BCD4", text: "#FFFFFF", label: "TS" },
+    "online-therapy": { bg: "#7B1FA2", text: "#FFFFFF", label: "OT" },
+    calmerry: { bg: "#5C6BC0", text: "#FFFFFF", label: "CA" },
+    cerebral: { bg: "#FF7043", text: "#FFFFFF", label: "CE" },
+    // Website Builders
+    wix: { bg: "#0C6EFC", text: "#FFFFFF", label: "Wix" },
+    squarespace: { bg: "#000000", text: "#FFFFFF", label: "SQ" },
+    shopify: { bg: "#96BF48", text: "#FFFFFF", label: "SH" },
+    hostinger: { bg: "#673DE6", text: "#FFFFFF", label: "HO" },
+    wordpress: { bg: "#21759B", text: "#FFFFFF", label: "WP" },
   };
 
   const logo = logos[brand] || { bg: "#6B7280", text: "#FFFFFF", label: brand.charAt(0).toUpperCase() };

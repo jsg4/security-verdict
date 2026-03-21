@@ -108,7 +108,7 @@ export default function Home() {
               </Link>
             ))}
 
-            {["Credit Cards", "VPN Services", "Insurance", "Antivirus"].map((name) => (
+            {["Credit Cards", "Antivirus"].map((name) => (
               <div key={name} className="block bg-gray-50 border-2 border-dashed border-gray-200 rounded-2xl p-6 opacity-60">
                 <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
                   <svg viewBox="0 0 24 24" className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" strokeWidth={1.75}>
