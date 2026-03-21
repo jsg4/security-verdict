@@ -6,10 +6,10 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-[#0d47a1] shadow-lg">
+      <div className="max-w-6xl mx-auto px-4 h-14 sm:h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center backdrop-blur-sm">
             <svg
               viewBox="0 0 24 24"
               className="w-5 h-5 text-white"
@@ -24,30 +24,30 @@ export default function Header() {
               />
             </svg>
           </div>
-          <span className="font-bold text-lg text-[var(--foreground)] hidden sm:block">
+          <span className="font-bold text-lg text-white hidden sm:block">
             SecurityVerdict
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-          <a href="#top-picks" className="hover:text-[var(--primary)] transition-colors">
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-white/80">
+          <a href="#top-picks" className="hover:text-white transition-colors">
             Top Picks
           </a>
-          <a href="#reviews" className="hover:text-[var(--primary)] transition-colors">
+          <a href="#reviews" className="hover:text-white transition-colors">
             Reviews
           </a>
-          <a href="#comparison" className="hover:text-[var(--primary)] transition-colors">
+          <a href="#comparison" className="hover:text-white transition-colors">
             Compare
           </a>
-          <a href="#methodology" className="hover:text-[var(--primary)] transition-colors">
+          <a href="#methodology" className="hover:text-white transition-colors">
             Methodology
           </a>
-          <a href="#faq" className="hover:text-[var(--primary)] transition-colors">
+          <a href="#faq" className="hover:text-white transition-colors">
             FAQ
           </a>
         </nav>
 
-        <div className="hidden md:flex items-center gap-2 text-xs text-gray-500">
+        <div className="hidden md:flex items-center gap-2 text-xs text-white/60">
           <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -55,7 +55,7 @@ export default function Header() {
         </div>
 
         <button
-          className="md:hidden p-2"
+          className="md:hidden p-2 text-white"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -70,12 +70,12 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-3">
+        <div className="md:hidden border-t border-white/10 bg-[#0d47a1] px-4 py-4 space-y-3">
           {["Top Picks", "Reviews", "Compare", "Methodology", "FAQ"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(" ", "-")}`}
-              className="block text-sm font-medium text-gray-600 hover:text-[var(--primary)]"
+              className="block text-sm font-medium text-white/80 hover:text-white"
               onClick={() => setMenuOpen(false)}
             >
               {item}

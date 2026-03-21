@@ -4,12 +4,15 @@ import SocialProof from "@/components/SocialProof";
 import Disclosure from "@/components/Disclosure";
 import TopPicks from "@/components/TopPicks";
 import TableOfContents from "@/components/TableOfContents";
+import ProductShowcase from "@/components/ProductShowcase";
 import DetailedReview from "@/components/DetailedReview";
 import ComparisonTable from "@/components/ComparisonTable";
-import HowWeEvaluate from "@/components/HowWeEvaluate";
+import ThreatBanner from "@/components/ThreatBanner";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 import EducationalContent from "@/components/EducationalContent";
-import FAQ from "@/components/FAQ";
+import HowWeEvaluate from "@/components/HowWeEvaluate";
 import AuthorBio from "@/components/AuthorBio";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import { products } from "@/data/products";
 
@@ -22,6 +25,7 @@ export default function Home() {
         <SocialProof />
         <Disclosure />
         <TopPicks products={products.slice(0, 3)} />
+        <ProductShowcase />
         <TableOfContents />
         <section id="reviews" className="max-w-4xl mx-auto px-4 py-8">
           <h2 className="text-2xl font-bold text-[var(--foreground)] mb-8">
@@ -32,6 +36,8 @@ export default function Home() {
           ))}
         </section>
         <ComparisonTable products={products} />
+        <ThreatBanner />
+        <TestimonialCarousel />
         <EducationalContent />
         <HowWeEvaluate />
         <div className="max-w-4xl mx-auto px-4">

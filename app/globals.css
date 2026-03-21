@@ -101,3 +101,48 @@ html {
 .animate-fade-in-up {
   animation: fadeInUp 0.5s ease-out forwards;
 }
+
+/* Mobile fixes */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Comparison table horizontal scroll hint */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .overflow-x-auto::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to right, transparent, white);
+    pointer-events: none;
+  }
+
+  /* Stack pros/cons on mobile */
+  .grid.md\:grid-cols-2 {
+    gap: 1rem;
+  }
+
+  /* Tighter padding on cards */
+  article .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  article .py-6 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Smooth scroll offset for sticky header */
+[id] {
+  scroll-margin-top: 4.5rem;
+}
