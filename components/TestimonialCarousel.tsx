@@ -185,10 +185,10 @@ export default function TestimonialCarousel() {
                 <Image
                   src={t.photo}
                   alt={t.name}
-                  width={42}
-                  height={42}
+                  width={56}
+                  height={56}
                   className="rounded-full object-cover flex-shrink-0"
-                  style={{ width: 42, height: 42 }}
+                  style={{ width: 56, height: 56 }}
                 />
                 <div className="flex-1">
                   <div className="flex items-center gap-1.5">

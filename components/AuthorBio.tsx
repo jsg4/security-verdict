@@ -17,10 +17,10 @@ export default function AuthorBio({ variant = "inline" }: { variant?: "inline" |
         <Image
           src="/photos/author.jpg"
           alt="Daniel Rosenberg"
-          width={42}
-          height={42}
+          width={52}
+          height={52}
           className="rounded-full object-cover flex-shrink-0"
-          style={{ width: 42, height: 42 }}
+          style={{ width: 52, height: 52 }}
         />
         <div>
           <div className="flex items-center gap-1">
@@ -43,10 +43,10 @@ export default function AuthorBio({ variant = "inline" }: { variant?: "inline" |
         <Image
           src="/photos/author.jpg"
           alt="Daniel Rosenberg"
-          width={64}
-          height={64}
+          width={80}
+          height={80}
           className="rounded-full object-cover flex-shrink-0"
-          style={{ width: 64, height: 64 }}
+          style={{ width: 80, height: 80 }}
         />
         <div className="flex-1">
           <div className="flex items-center gap-1.5 mb-1">
