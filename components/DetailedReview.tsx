@@ -127,13 +127,13 @@ export default function DetailedReview({
 
         {/* Product Image */}
         {product.productImage && (
-          <div className="mb-6 rounded-xl overflow-hidden border border-gray-200">
+          <div className="mb-6 rounded-xl overflow-hidden border border-gray-200 max-h-[320px]">
             <Image
               src={product.productImage}
               alt={product.productImageAlt || `${product.name} product screenshot`}
               width={800}
-              height={500}
-              className="w-full h-auto object-cover"
+              height={320}
+              className="w-full h-full object-cover object-top"
             />
           </div>
         )}
