@@ -54,8 +54,9 @@ export default function Home() {
               Trusted Scorecard
             </p>
             <h1 className="text-3xl md:text-5xl font-extrabold text-[var(--foreground)] leading-tight mb-4">
-              Independent Reviews You Can{" "}
-              <span className="text-[var(--cta)]">Trust</span>
+              Independent Reviews
+              <br />
+              <span className="text-[#FA8072]">You Can Trust</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 max-w-2xl mx-auto">
               Expert-tested comparison guides to help you find the best products
