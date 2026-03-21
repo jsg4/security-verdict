@@ -79,12 +79,6 @@ export default function Home() {
               </span>
             </div>
 
-            {/* Trust logos */}
-            <div className="flex items-center justify-center gap-8 text-gray-300">
-              {["Consumer Reports", "CNET", "PCMag", "Tom's Guide"].map((name) => (
-                <span key={name} className="text-xs font-bold tracking-wide text-gray-400">{name}</span>
-              ))}
-            </div>
           </div>
         </section>
 
