@@ -31,6 +31,8 @@ export interface Product {
   cons: { text: string; icon: string }[];
   review: string;
   features: { label: string; value: string }[];
+  productImage?: string;
+  productImageAlt?: string;
 }
 
 export const products: Product[] = [
@@ -87,6 +89,8 @@ export const products: Product[] = [
       { label: "Digital Security", value: "VPN, antivirus, password manager included" },
       { label: "Data Broker Removal", value: "Automated opt-out from 100+ data brokers" },
     ],
+    productImage: "/products/aura-dashboard.png",
+    productImageAlt: "Aura identity protection dashboard showing monitoring status and alerts",
   },
   {
     slug: "mcafee",
@@ -200,6 +204,8 @@ export const products: Product[] = [
       { label: "Unique Features", value: "Synthetic ID theft, phone takeover monitoring" },
       { label: "Digital Security", value: "Norton 360 antivirus, VPN, password manager" },
     ],
+    productImage: "/products/lifelock-scam.png",
+    productImageAlt: "LifeLock scam detection notification on mobile phone",
   },
   {
     slug: "identity-guard",
@@ -253,6 +259,8 @@ export const products: Product[] = [
       { label: "Insurance Coverage", value: "$1,000,000 all plans" },
       { label: "Family Coverage", value: "Up to 5 adults on family plans" },
     ],
+    productImage: "/products/identityguard-app.png",
+    productImageAlt: "Identity Guard app showing active monitoring and alerts",
   },
   {
     slug: "experian",
@@ -306,5 +314,7 @@ export const products: Product[] = [
       { label: "Insurance Coverage", value: "$1,000,000" },
       { label: "Dark Web Monitoring", value: "SSN, email, phone surveillance" },
     ],
+    productImage: "/products/experian-hero.png",
+    productImageAlt: "Experian identity protection dashboard with credit monitoring features",
   },
 ];

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Product } from "@/data/products";
 import ScoreRing from "./ScoreRing";
 import StarRating from "./StarRating";
@@ -123,6 +124,19 @@ export default function DetailedReview({
             </ul>
           </div>
         </div>
+
+        {/* Product Image */}
+        {product.productImage && (
+          <div className="mb-6 rounded-xl overflow-hidden border border-gray-200">
+            <Image
+              src={product.productImage}
+              alt={product.productImageAlt || `${product.name} product screenshot`}
+              width={800}
+              height={500}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
 
         {/* Review */}
         <div className="mb-6">
