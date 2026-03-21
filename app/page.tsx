@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import SocialProof from "@/components/SocialProof";
 import Disclosure from "@/components/Disclosure";
 import TopPicks from "@/components/TopPicks";
 import TableOfContents from "@/components/TableOfContents";
@@ -8,6 +9,7 @@ import ComparisonTable from "@/components/ComparisonTable";
 import HowWeEvaluate from "@/components/HowWeEvaluate";
 import EducationalContent from "@/components/EducationalContent";
 import FAQ from "@/components/FAQ";
+import AuthorBio from "@/components/AuthorBio";
 import Footer from "@/components/Footer";
 import { products } from "@/data/products";
 
@@ -17,6 +19,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <SocialProof />
         <Disclosure />
         <TopPicks products={products.slice(0, 3)} />
         <TableOfContents />
@@ -31,6 +34,9 @@ export default function Home() {
         <ComparisonTable products={products} />
         <EducationalContent />
         <HowWeEvaluate />
+        <div className="max-w-4xl mx-auto px-4">
+          <AuthorBio variant="full" />
+        </div>
         <FAQ />
       </main>
       <Footer />

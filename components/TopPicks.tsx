@@ -1,5 +1,7 @@
 import { Product } from "@/data/products";
 import ScoreRing from "./ScoreRing";
+import StarRating from "./StarRating";
+import BrandLogo from "./BrandLogo";
 
 export default function TopPicks({ products }: { products: Product[] }) {
   return (
@@ -33,11 +35,9 @@ export default function TopPicks({ products }: { products: Product[] }) {
               </span>
             )}
 
-            <div className="flex items-center gap-3 mb-4 mt-2">
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-lg font-bold text-[var(--primary)]">
-                {product.name.charAt(0)}
-              </div>
-              <div>
+            <div className="flex items-center gap-3 mb-3 mt-2">
+              <BrandLogo brand={product.slug} size={44} />
+              <div className="flex-1">
                 <h3 className="font-bold text-[var(--foreground)]">
                   {product.name}
                 </h3>
@@ -46,6 +46,11 @@ export default function TopPicks({ products }: { products: Product[] }) {
               <div className="ml-auto">
                 <ScoreRing score={product.score} size={52} />
               </div>
+            </div>
+
+            {/* Star rating */}
+            <div className="mb-3">
+              <StarRating rating={product.stars} reviewCount={product.reviewCount} size={13} />
             </div>
 
             <p className="text-sm text-gray-600 mb-4 flex-1">
@@ -77,7 +82,7 @@ export default function TopPicks({ products }: { products: Product[] }) {
               href={product.url}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className={`block w-full text-center py-3 rounded-lg font-semibold text-sm transition-all ${
+              className={`block w-full text-center py-3 rounded-lg font-semibold text-sm transition-all shadow-md ${
                 i === 0
                   ? "bg-[var(--gold)] text-white hover:brightness-110"
                   : "bg-[var(--primary)] text-white hover:brightness-110"
