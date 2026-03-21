@@ -1,0 +1,144 @@
+import { Product } from "@/data/products";
+
+function Check() {
+  return (
+    <svg viewBox="0 0 24 24" className="w-5 h-5 text-[var(--success)] mx-auto" fill="currentColor">
+      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+    </svg>
+  );
+}
+
+function Cross() {
+  return (
+    <svg viewBox="0 0 24 24" className="w-5 h-5 text-gray-300 mx-auto" fill="currentColor">
+      <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clipRule="evenodd" />
+    </svg>
+  );
+}
+
+export default function ComparisonTable({ products }: { products: Product[] }) {
+  const rows: { label: string; key: keyof Product | "price" }[] = [
+    { label: "Security Score", key: "score" },
+    { label: "Starting Price", key: "price" },
+    { label: "Insurance", key: "identityInsurance" },
+    { label: "Credit Monitoring", key: "creditMonitoring" },
+    { label: "Dark Web Monitoring", key: "darkWebMonitoring" },
+    { label: "SSN Monitoring", key: "ssnMonitoring" },
+    { label: "Credit Lock", key: "creditLock" },
+    { label: "VPN Included", key: "vpnIncluded" },
+    { label: "Antivirus", key: "antivirus" },
+    { label: "Password Manager", key: "passwordManager" },
+    { label: "Data Cleanup", key: "personalDataCleanup" },
+    { label: "Family Plans", key: "familyPlan" },
+    { label: "Free Trial", key: "freeTrial" },
+    { label: "Money-Back", key: "moneyBack" },
+  ];
+
+  return (
+    <section id="comparison" className="max-w-5xl mx-auto px-4 py-10">
+      <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">
+        Side-by-Side Comparison
+      </h2>
+      <p className="text-gray-500 text-sm mb-6">
+        Every feature, every plan, every price — at a glance.
+      </p>
+
+      <div className="overflow-x-auto border border-gray-200 rounded-xl shadow-sm">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="bg-[var(--gray-50)] border-b border-gray-200">
+              <th className="text-left px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wide sticky left-0 bg-[var(--gray-50)] z-10 min-w-[140px]">
+                Feature
+              </th>
+              {products.map((p) => (
+                <th
+                  key={p.slug}
+                  className="px-4 py-3 text-center min-w-[130px]"
+                >
+                  <div className="flex flex-col items-center gap-1">
+                    <span className="font-bold text-[var(--foreground)] text-sm">
+                      {p.name}
+                    </span>
+                    {p.badge && (
+                      <span className="text-[10px] font-semibold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded-full">
+                        {p.badge}
+                      </span>
+                    )}
+                  </div>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr
+                key={row.label}
+                className={`border-b border-gray-100 ${
+                  i % 2 === 0 ? "bg-white" : "bg-[var(--gray-50)]"
+                }`}
+              >
+                <td className={`px-4 py-3 font-medium text-gray-700 sticky left-0 z-10 ${i % 2 === 0 ? "bg-white" : "bg-[var(--gray-50)]"}`}>
+                  {row.label}
+                </td>
+                {products.map((p) => {
+                  let content;
+                  if (row.key === "price") {
+                    content = (
+                      <span className="font-semibold">{p.annualMonthly}</span>
+                    );
+                  } else if (row.key === "score") {
+                    content = (
+                      <span
+                        className={`inline-flex items-center justify-center w-10 h-10 rounded-full font-bold text-white text-sm ${
+                          p.score >= 9
+                            ? "bg-[var(--success)]"
+                            : p.score >= 8
+                              ? "bg-[var(--primary)]"
+                              : "bg-[var(--warning)]"
+                        }`}
+                      >
+                        {p.score}
+                      </span>
+                    );
+                  } else {
+                    const val = p[row.key as keyof Product];
+                    if (typeof val === "boolean") {
+                      content = val ? <Check /> : <Cross />;
+                    } else {
+                      content = (
+                        <span className="text-gray-700">{String(val)}</span>
+                      );
+                    }
+                  }
+                  return (
+                    <td key={p.slug} className="px-4 py-3 text-center">
+                      {content}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+            {/* CTA Row */}
+            <tr className="bg-[var(--primary-light)]">
+              <td className="px-4 py-4 font-medium text-gray-700 sticky left-0 bg-[var(--primary-light)] z-10">
+                Get Started
+              </td>
+              {products.map((p) => (
+                <td key={p.slug} className="px-4 py-4 text-center">
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="inline-block bg-[var(--primary)] text-white text-xs font-bold px-4 py-2 rounded-lg hover:brightness-110 transition-all"
+                  >
+                    {p.ctaText}
+                  </a>
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
