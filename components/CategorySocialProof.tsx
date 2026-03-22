@@ -2,27 +2,29 @@ import { CategoryConfig } from "@/data/types";
 
 export default function CategorySocialProof({ config }: { config: CategoryConfig }) {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-6">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="max-w-[var(--content-width)] mx-auto px-5 py-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {config.stats.map((s, i) => (
-          <div key={i} className="bg-white border border-gray-200 rounded-xl p-4 text-center">
-            <p className="text-2xl font-extrabold text-[var(--primary)]">{s.stat}</p>
-            <p className="text-xs text-gray-500 font-medium mt-1">{s.label}</p>
+          <div key={i} className="bg-white border border-[var(--gray-200)] rounded-[var(--radius-md)] p-4 text-center">
+            <p className="text-[1.5rem] font-extrabold text-[var(--primary)] tracking-tight">{s.stat}</p>
+            <p className="text-[12px] text-[var(--gray-500)] font-medium mt-0.5">{s.label}</p>
           </div>
         ))}
       </div>
-      <div className="mt-6 flex flex-col items-center">
-        <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest mb-3">
-          Methodology Referenced By
-        </p>
-        <div className="flex items-center gap-6 text-gray-300">
-          {config.referencedBy.map((name) => (
-            <span key={name} className="text-xs font-bold tracking-wide text-gray-400 hover:text-gray-500 transition-colors">
-              {name}
-            </span>
-          ))}
+      {config.referencedBy.length > 0 && (
+        <div className="mt-5 flex flex-col items-center">
+          <p className="text-[10px] font-semibold text-[var(--gray-400)] uppercase tracking-widest mb-2.5">
+            Methodology Referenced By
+          </p>
+          <div className="flex items-center gap-6">
+            {config.referencedBy.map((name) => (
+              <span key={name} className="text-[12px] font-bold tracking-wide text-[var(--gray-400)]">
+                {name}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

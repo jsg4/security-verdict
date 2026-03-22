@@ -4,22 +4,22 @@ import StarRating from "./StarRating";
 
 export default function QuickCompare({ products }: { products: Product[] }) {
   return (
-    <section className="max-w-4xl mx-auto px-4 py-8">
-      <div className="flex items-end justify-between mb-6">
+    <section className="max-w-[var(--content-width)] mx-auto px-5 py-10">
+      <div className="flex items-end justify-between mb-5">
         <div>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)]">
+          <h2 className="text-[1.5rem] md:text-[1.75rem] font-extrabold text-[var(--foreground)] tracking-tight">
             Quick Compare
           </h2>
-          <p className="text-sm text-gray-500 mt-1">
-            All {products.length} services ranked at a glance
+          <p className="text-[14px] text-[var(--gray-500)] mt-1">
+            All {products.length} services at a glance
           </p>
         </div>
-        <a href="#reviews" className="text-sm font-semibold text-[var(--primary)] hover:underline hidden sm:block">
-          See full reviews &darr;
+        <a href="#reviews" className="text-[13px] font-semibold text-[var(--primary)] hover:underline hidden sm:block">
+          Full reviews &darr;
         </a>
       </div>
 
-      <div className="space-y-3">
+      <div className="space-y-2.5">
         {products.map((product, i) => {
           const isTop = i === 0;
 
@@ -29,52 +29,49 @@ export default function QuickCompare({ products }: { products: Product[] }) {
               href={product.url}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className={`block no-underline text-inherit rounded-xl border-2 overflow-hidden hover:shadow-lg transition-all ${
+              className={`block no-underline text-inherit rounded-[var(--radius-lg)] border overflow-hidden transition-all hover:shadow-md ${
                 isTop
-                  ? "border-[var(--gold)] bg-[var(--gold-light)]"
-                  : "border-gray-200 bg-white hover:border-gray-300"
+                  ? "border-[var(--gold)] bg-[var(--gold-light)] border-2"
+                  : "border-[var(--gray-200)] bg-white hover:border-[var(--gray-300)]"
               }`}
             >
               {isTop && (
-                <div className="bg-[var(--success)] text-white text-center py-1.5 text-xs font-bold tracking-wide">
+                <div className="bg-[var(--success)] text-white text-center py-1.5 text-[11px] font-bold tracking-wider uppercase">
                   Our Recommendation
                 </div>
               )}
 
-              <div className="p-4">
-                {/* Row 1: Logo + Name + Score + Price + CTA */}
+              <div className="px-4 py-3.5">
+                {/* Main row */}
                 <div className="flex items-center gap-3">
-                  {/* Rank */}
-                  <span className="text-xl font-extrabold text-gray-300 w-6 text-center flex-shrink-0">
+                  <span className="text-[18px] font-bold text-[var(--gray-300)] w-5 text-center flex-shrink-0 tabular-nums">
                     {i + 1}
                   </span>
 
-                  {/* Logo */}
-                  <BrandLogo brand={product.slug} size={40} />
+                  <BrandLogo brand={product.slug} size={38} />
 
-                  {/* Name + Rating */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <h3 className="text-base font-extrabold text-[var(--foreground)] truncate">
+                      <h3 className="text-[15px] font-bold text-[var(--foreground)] truncate">
                         {product.name}
                       </h3>
                       {product.bestFor && (
-                        <span className="hidden sm:inline text-[10px] font-bold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded-full whitespace-nowrap">
+                        <span className="hidden sm:inline text-[10px] font-semibold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded-[var(--radius-full)] whitespace-nowrap">
                           {product.bestFor}
                         </span>
                       )}
                     </div>
-                    <div className="flex items-center gap-2 mt-0.5">
-                      <StarRating rating={product.stars} size={12} />
-                      <span className="text-[11px] text-gray-400 truncate">
-                        {product.externalReviewCount || product.reviewCount} reviews
+                    <div className="flex items-center gap-1.5 mt-0.5">
+                      <StarRating rating={product.stars} size={11} />
+                      <span className="text-[11px] text-[var(--gray-400)]">
+                        {product.externalReviewCount || product.reviewCount}
                       </span>
                     </div>
                   </div>
 
-                  {/* Score badge */}
+                  {/* Score */}
                   <div
-                    className={`w-11 h-11 rounded-lg flex items-center justify-center font-extrabold text-white text-sm flex-shrink-0 ${
+                    className={`w-10 h-10 rounded-[var(--radius-sm)] flex items-center justify-center font-bold text-white text-[13px] flex-shrink-0 ${
                       product.score >= 9
                         ? "bg-[var(--success)]"
                         : product.score >= 8
@@ -86,32 +83,30 @@ export default function QuickCompare({ products }: { products: Product[] }) {
                   </div>
 
                   {/* Price */}
-                  <div className="text-right flex-shrink-0 w-16">
-                    <p className="text-base font-extrabold text-[var(--foreground)] leading-tight">{product.annualMonthly}</p>
-                    <p className="text-[10px] text-gray-400 leading-tight">/month</p>
+                  <div className="text-right flex-shrink-0 w-[60px]">
+                    <p className="text-[15px] font-bold text-[var(--foreground)] leading-none">{product.annualMonthly}</p>
+                    <p className="text-[10px] text-[var(--gray-400)] mt-0.5">/month</p>
                   </div>
 
-                  {/* CTA — desktop only */}
-                  <span className="btn-cta px-4 py-2 text-sm rounded-lg flex-shrink-0 hidden md:inline-flex">
+                  {/* CTA */}
+                  <span className="btn-cta text-[13px] px-4 py-2 hidden md:inline-flex flex-shrink-0">
                     Visit Site
                   </span>
                 </div>
 
-                {/* Row 2: Deal callout — only if exists */}
+                {/* Deal line */}
                 {(product.promoCode || product.discount) && (
-                  <div className="mt-2 ml-[76px] sm:ml-[76px]">
-                    <span className="text-xs font-bold text-[var(--success)]">
-                      {product.promoCode
-                        ? `${product.discount} — Code: ${product.promoCode}`
-                        : product.discount}
-                    </span>
-                  </div>
+                  <p className="mt-2 ml-[62px] text-[12px] font-semibold text-[var(--success)]">
+                    {product.promoCode
+                      ? `${product.discount} — Code: ${product.promoCode}`
+                      : product.discount}
+                  </p>
                 )}
 
-                {/* Visitor counter — #1 only */}
+                {/* Visitor counter */}
                 {isTop && product.weeklyVisitors && (
-                  <p className="mt-2 ml-[76px] text-[11px] text-gray-400 animate-fade-in-delayed">
-                    <strong className="text-gray-500">{product.weeklyVisitors}</strong> people visited this week
+                  <p className="mt-1.5 ml-[62px] text-[11px] text-[var(--gray-400)] animate-fade-in-delayed">
+                    <strong className="text-[var(--gray-500)]">{product.weeklyVisitors}</strong> people visited this week
                   </p>
                 )}
               </div>

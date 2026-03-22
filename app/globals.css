@@ -1,29 +1,56 @@
 @import "tailwindcss";
 
+/* ============================================
+   DESIGN SYSTEM — Trusted Scorecard
+   Modeled after NerdWallet + Wirecutter editorial quality
+   ============================================ */
+
 :root {
+  /* Brand Colors */
   --background: #ffffff;
-  --foreground: #1a1a2e;
+  --foreground: #1a1f36;
   --primary: #0d47a1;
-  --primary-light: #e3f2fd;
+  --primary-light: #e8f0fe;
   --accent: #1565c0;
+
+  /* CTA — High-contrast coral for conversion */
   --cta: #FF4A64;
-  --cta-hover: #E03350;
-  --success: #2e7d32;
-  --success-light: #e8f5e9;
-  --warning: #f57f17;
-  --danger: #c62828;
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #eeeeee;
-  --gray-300: #e0e0e0;
-  --gray-400: #bdbdbd;
-  --gray-500: #9e9e9e;
-  --gray-600: #757575;
-  --gray-700: #616161;
-  --gray-800: #424242;
-  --gray-900: #212121;
-  --gold: #ff8f00;
+  --cta-hover: #E5334D;
+
+  /* Semantic Colors */
+  --success: #1a7f37;
+  --success-light: #dafbe1;
+  --warning: #e6a700;
+  --danger: #cf222e;
+  --gold: #e6a700;
   --gold-light: #fff8e1;
+
+  /* Neutral Scale — Slate-based for editorial feel */
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+
+  /* Spacing Scale */
+  --section-gap: 4rem;      /* 64px between major sections */
+  --section-gap-lg: 5rem;   /* 80px for hero/banner breaks */
+
+  /* Max Widths */
+  --content-width: 48rem;   /* 768px — article content */
+  --wide-width: 64rem;      /* 1024px — comparison tables, cards */
+
+  /* Border Radius Scale */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-full: 9999px;
 }
 
 @theme inline {
@@ -44,13 +71,19 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* ============================================
+   BASE TYPOGRAPHY
+   ============================================ */
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
+  letter-spacing: -0.011em;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
@@ -58,10 +91,91 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Heading System */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+/* ============================================
+   SCROLL OFFSET
+   ============================================ */
+
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* ============================================
+   LINK RESET (for clickable cards)
+   ============================================ */
+
+a.no-underline,
+a.no-underline:hover,
+a.no-underline:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================================
+   CTA BUTTON SYSTEM
+   ============================================ */
+
+.btn-cta {
+  background-color: var(--cta);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: var(--radius-md);
+  padding: 0.625rem 1.5rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-cta:hover {
+  background-color: var(--cta-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 74, 100, 0.25);
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 74, 100, 0.2);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1.25rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* ============================================
+   SCORE RING
+   ============================================ */
+
 .score-ring {
   position: relative;
-  width: 64px;
-  height: 64px;
 }
 
 .score-ring svg {
@@ -70,7 +184,7 @@ html {
 
 .score-ring-bg {
   fill: none;
-  stroke: #e0e0e0;
+  stroke: var(--gray-200);
   stroke-width: 4;
 }
 
@@ -81,80 +195,49 @@ html {
   transition: stroke-dashoffset 0.6s ease;
 }
 
-.pros-icon::before {
-  content: "\2713";
-  color: var(--success);
-  font-weight: 700;
-  margin-right: 8px;
+/* ============================================
+   CARD SYSTEM
+   ============================================ */
+
+.card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.cons-icon::before {
-  content: "\2717";
-  color: var(--danger);
-  font-weight: 700;
-  margin-right: 8px;
+.card:hover {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--gray-300);
 }
+
+.card-featured {
+  border: 2px solid var(--gold);
+  background: var(--gold-light);
+}
+
+/* ============================================
+   SECTION DIVIDERS
+   ============================================ */
+
+.section-divider {
+  border-top: 1px solid var(--gray-200);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.5s ease-out forwards;
+  animation: fadeInUp 0.4s ease-out forwards;
 }
 
-/* Mobile fixes */
-@media (max-width: 640px) {
-  h1 {
-    font-size: 1.75rem !important;
-    line-height: 1.2 !important;
-  }
-
-  .overflow-x-auto {
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* Smooth scroll offset for sticky header */
-[id] {
-  scroll-margin-top: 4.5rem;
-}
-
-/* Remove link styling from article wrappers */
-a.no-underline,
-a.no-underline:hover,
-a.no-underline:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* CTA button global style */
-.btn-cta {
-  background-color: var(--cta);
-  color: white;
-  font-weight: 700;
-  border-radius: 8px;
-  transition: all 0.15s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.btn-cta:hover {
-  background-color: var(--cta-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 74, 100, 0.3);
-}
-
-/* Visitor counter delayed fade-in */
 @keyframes fadeInDelayed {
   0% { opacity: 0; }
   60% { opacity: 0; }
@@ -165,7 +248,6 @@ a.no-underline:visited {
   animation: fadeInDelayed 3s ease forwards;
 }
 
-/* Sticky mobile CTA slide up */
 @keyframes slideUp {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
@@ -173,4 +255,40 @@ a.no-underline:visited {
 
 .animate-slide-up {
   animation: slideUp 0.3s ease forwards;
+}
+
+/* ============================================
+   MOBILE REFINEMENTS
+   ============================================ */
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Tighter section spacing on mobile */
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ============================================
+   SELECTION & FOCUS
+   ============================================ */
+
+::selection {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
 }
