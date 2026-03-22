@@ -42,7 +42,7 @@
   --section-gap-lg: 5rem;   /* 80px for hero/banner breaks */
 
   /* Max Widths */
-  --content-width: 48rem;   /* 768px — article content */
+  --content-width: 56rem;   /* 896px — main content column */
   --wide-width: 64rem;      /* 1024px — comparison tables, cards */
 
   /* Border Radius Scale */
