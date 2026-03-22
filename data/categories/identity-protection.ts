@@ -176,6 +176,8 @@ export const identityProtection: CategoryConfig = {
         { label: "Data Broker Removal", value: "Personal Data Cleanup (Advanced+)" },
         { label: "Ransomware Coverage", value: "$25,000 (Ultimate only)" },
       ],
+      productImage: "/products/mcafee-hero.svg",
+      productImageAlt: "McAfee+ security dashboard showing threat monitoring and protection status",
     },
     {
       slug: "lifelock",

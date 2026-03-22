@@ -222,8 +222,8 @@ export const websiteBuilders: CategoryConfig = {
         { label: "Scalability", value: "From startup to enterprise (Shopify Plus)" },
         { label: "Analytics", value: "Built-in reports, conversion tracking, live view" },
       ],
-      productImage: undefined,
-      productImageAlt: undefined,
+      productImage: "/products/shopify-hero.svg",
+      productImageAlt: "Shopify ecommerce dashboard showing sales analytics and order management",
     },
     {
       slug: "hostinger-website-builder",
@@ -284,8 +284,8 @@ export const websiteBuilders: CategoryConfig = {
         { label: "Ecommerce", value: "Online store with 0% transaction fees" },
         { label: "Hosting", value: "Free SSL, domain, unlimited storage & bandwidth" },
       ],
-      productImage: undefined,
-      productImageAlt: undefined,
+      productImage: "/products/hostinger-hero.svg",
+      productImageAlt: "Hostinger Website Builder with AI-powered templates and drag-and-drop editor",
     },
     {
       slug: "wordpress-com",
@@ -348,8 +348,8 @@ export const websiteBuilders: CategoryConfig = {
         { label: "SEO", value: "Yoast SEO, sitemaps, structured data" },
         { label: "Scalability", value: "From personal blog to enterprise — no limits" },
       ],
-      productImage: undefined,
-      productImageAlt: undefined,
+      productImage: "/products/wordpress-hero.svg",
+      productImageAlt: "WordPress.com admin dashboard with content management and site customization",
     },
   ],
 

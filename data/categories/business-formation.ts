@@ -155,8 +155,8 @@ export const businessFormation: CategoryConfig = {
         { label: "Mail Forwarding", value: "Free scanning and forwarding of business mail" },
         { label: "Support", value: "Corporate Guides — phone and email M-F" },
       ],
-      productImage: undefined,
-      productImageAlt: undefined,
+      productImage: "/products/northwest-hero.svg",
+      productImageAlt: "Northwest Registered Agent business formation pricing and service plans",
     },
     {
       slug: "legalzoom",
@@ -281,8 +281,8 @@ export const businessFormation: CategoryConfig = {
         { label: "Business Tools", value: "Digital business cards, social media assets, brand kit" },
         { label: "Compliance", value: "Annual report filing and deadline alerts" },
       ],
-      productImage: undefined,
-      productImageAlt: undefined,
+      productImage: "/products/tailor-brands-hero.svg",
+      productImageAlt: "Tailor Brands LLC formation dashboard with logo design and business tools",
     },
     {
       slug: "rocket-lawyer",
@@ -341,8 +341,8 @@ export const businessFormation: CategoryConfig = {
         { label: "Attorney Access", value: "On-call consultations included with membership" },
         { label: "Document Review", value: "Attorney review at 40% member discount" },
       ],
-      productImage: undefined,
-      productImageAlt: undefined,
+      productImage: "/products/rocket-lawyer-hero.svg",
+      productImageAlt: "Rocket Lawyer legal document platform with attorney consultation features",
     },
   ],
 

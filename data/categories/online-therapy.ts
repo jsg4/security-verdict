@@ -221,8 +221,8 @@ export const onlineTherapy: CategoryConfig = {
         { label: "Session Format", value: "Video sessions + daily messaging" },
         { label: "Best For", value: "Anxiety, depression, phobias, insomnia, negative thought patterns" },
       ],
-      productImage: undefined,
-      productImageAlt: undefined,
+      productImage: "/products/online-therapy-hero.svg",
+      productImageAlt: "Online-Therapy.com CBT-based therapy platform with messaging and video sessions",
     },
     {
       slug: "calmerry",
@@ -283,8 +283,8 @@ export const onlineTherapy: CategoryConfig = {
         { label: "Treatment Plans", value: "Personalized goals and progress tracking" },
         { label: "Specialties", value: "Anxiety, depression, stress, self-esteem, life transitions" },
       ],
-      productImage: undefined,
-      productImageAlt: undefined,
+      productImage: "/products/calmerry-hero.svg",
+      productImageAlt: "Calmerry online therapy platform with therapist matching and session scheduling",
     },
     {
       slug: "cerebral",
@@ -346,8 +346,8 @@ export const onlineTherapy: CategoryConfig = {
         { label: "Specialties", value: "Depression, anxiety, ADHD, bipolar, insomnia, PMDD" },
         { label: "Care Coordination", value: "Dedicated care coordinators across providers" },
       ],
-      productImage: undefined,
-      productImageAlt: undefined,
+      productImage: "/products/cerebral-hero.svg",
+      productImageAlt: "Cerebral mental health platform with treatment plans and medication management",
     },
   ],
 
