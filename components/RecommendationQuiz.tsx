@@ -207,7 +207,7 @@ export default function RecommendationQuiz({ config }: { config: CategoryConfig 
         <p className="mx-auto mb-6 max-w-md text-base opacity-90">
           Answer 4 quick questions and we'll match you with the best option based on your needs.
         </p>
-        <button onClick={handleStart} className="btn-cta text-lg" aria-label="Start the recommendation quiz">
+        <button onClick={handleStart} className="btn-cta px-8 py-3.5 text-base" aria-label="Start the recommendation quiz">
           Take Our 60-Second Quiz
         </button>
       </section>
@@ -260,11 +260,11 @@ export default function RecommendationQuiz({ config }: { config: CategoryConfig 
                 role="radio"
                 aria-checked={selected}
                 className={`
-                  rounded-xl border-2 px-5 py-4 text-left text-base font-semibold transition-all duration-200
+                  rounded-[var(--radius-md)] border-2 px-5 py-3.5 text-left text-[15px] font-semibold transition-all duration-200 cursor-pointer
                   ${
                     selected
-                      ? "border-[var(--primary)] bg-[var(--primary-light,#e8f0fe)] text-[var(--primary)]"
-                      : "border-[var(--gray-200,#e5e7eb)] bg-white text-[var(--foreground)] hover:border-[var(--primary)] hover:shadow-md"
+                      ? "border-[var(--primary)] bg-[var(--primary-light)] text-[var(--primary)]"
+                      : "border-[var(--gray-200)] bg-white text-[var(--foreground)] hover:border-[var(--primary)] hover:shadow-sm"
                   }
                 `}
               >
@@ -337,7 +337,7 @@ export default function RecommendationQuiz({ config }: { config: CategoryConfig 
               href={product.url}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="btn-cta flex-shrink-0 text-center text-sm"
+              className="btn-cta px-6 py-2.5 text-[14px] flex-shrink-0 text-center"
             >
               Visit Site
             </a>
@@ -372,7 +372,7 @@ export default function RecommendationQuiz({ config }: { config: CategoryConfig 
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 rounded-lg border border-[var(--gray-200,#e5e7eb)] px-4 py-2.5 text-sm text-[var(--foreground)] outline-none focus:border-[var(--primary)] focus:ring-2 focus:ring-[var(--primary-light,#e8f0fe)]"
               />
-              <button type="submit" className="btn-cta whitespace-nowrap text-sm">
+              <button type="submit" className="btn-cta px-6 py-2.5 text-[14px] whitespace-nowrap">
                 Email My Results
               </button>
             </form>

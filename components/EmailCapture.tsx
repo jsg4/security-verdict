@@ -30,8 +30,8 @@ export default function EmailCapture({ config }: { config: CategoryConfig }) {
   }
 
   return (
-    <section className="max-w-5xl mx-auto px-4 py-6">
-      <div className="bg-[var(--primary)] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-5">
+    <section className="max-w-[var(--content-width)] mx-auto px-5 py-6">
+      <div className="bg-[var(--primary)] rounded-[var(--radius-lg)] p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-5">
         <div className="flex-1 text-white">
           <p className="text-xs font-bold uppercase tracking-wider text-blue-200 mb-1">Free Weekly Updates</p>
           <h3 className="text-xl md:text-2xl font-extrabold mb-1">
@@ -48,9 +48,9 @@ export default function EmailCapture({ config }: { config: CategoryConfig }) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="px-4 py-3 rounded-lg text-sm text-[var(--foreground)] bg-white border-0 outline-none focus:ring-2 focus:ring-white/50 w-full sm:w-64"
+            className="px-4 py-3 rounded-[var(--radius-md)] text-[14px] text-[var(--foreground)] bg-white border-0 outline-none focus:ring-2 focus:ring-white/50 w-full sm:w-64"
           />
-          <button type="submit" className="btn-cta px-6 py-3 text-sm rounded-lg font-bold flex-shrink-0">
+          <button type="submit" className="btn-cta px-6 py-3 text-[14px] flex-shrink-0">
             Get Free Updates
             <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
