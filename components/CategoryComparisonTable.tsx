@@ -13,10 +13,10 @@ export default function CategoryComparisonTable({ config }: { config: CategoryCo
   const { products, comparisonRows } = config;
 
   return (
-    <section id="comparison" className="max-w-5xl mx-auto px-4 py-10">
+    <section id="comparison" className="max-w-[var(--content-width)] mx-auto px-5 py-10">
       <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-2">Side-by-Side Comparison</h2>
       <p className="text-gray-500 text-base mb-6">Every feature, every plan, every price — at a glance.</p>
-      <div className="overflow-x-auto border border-gray-200 rounded-xl shadow-sm">
+      <div className="overflow-x-auto border border-gray-200 rounded-[var(--radius-lg)] shadow-sm">
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-[var(--gray-50)] border-b border-gray-200">

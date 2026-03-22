@@ -4,7 +4,7 @@ import { CategoryConfig } from "@/data/types";
 export default function CategoryAuthor({ config }: { config: CategoryConfig }) {
   const { author } = config;
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-5 mt-6">
+    <div className="bg-white border border-gray-200 rounded-[var(--radius-lg)] p-5 mt-6">
       <div className="flex items-start gap-4">
         <Image src={author.photo} alt={author.name} width={80} height={80} className="rounded-full object-cover flex-shrink-0" style={{ width: 80, height: 80 }} />
         <div className="flex-1">

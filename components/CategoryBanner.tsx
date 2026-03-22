@@ -3,14 +3,14 @@ import { CategoryConfig } from "@/data/types";
 export default function CategoryBanner({ config }: { config: CategoryConfig }) {
   return (
     <section className="bg-[#0d47a1] py-10">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-[var(--content-width)] mx-auto px-5">
         <div className="text-center mb-8">
           <h2 className="text-xl md:text-2xl font-extrabold text-white mb-2">{config.bannerTitle}</h2>
           <p className="text-sm text-blue-200 max-w-2xl mx-auto">{config.bannerSubtitle}</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {config.bannerStats.map((item, i) => (
-            <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
+            <div key={i} className="bg-white/10 backdrop-blur-sm rounded-[var(--radius-lg)] p-4 text-center border border-white/10">
               <div className="flex justify-center mb-2">
                 <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
                   <svg viewBox="0 0 24 24" className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d={item.icon} /></svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="tsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#26D0E8"/>
+      <stop offset="100%" stop-color="#00BCD4"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <circle cx="100" cy="100" r="90" fill="url(#tsGrad)"/>
+  <!-- Speech bubble 1 (left, slightly behind) -->
+  <path d="M35 50 C35 42 43 35 55 35 L110 35 C122 35 130 42 130 50 L130 90 C130 98 122 105 110 105 L70 105 L50 125 L55 105 L55 105 C43 105 35 98 35 90 Z" fill="white" opacity="0.6"/>
+  <!-- Speech bubble 2 (right, in front) -->
+  <path d="M70 70 C70 62 78 55 90 55 L145 55 C157 55 165 62 165 70 L165 115 C165 123 157 130 145 130 L110 130 L130 155 L105 130 L90 130 C78 130 70 123 70 115 Z" fill="white"/>
+</svg>

@@ -3,7 +3,7 @@ import { CategoryConfig } from "@/data/types";
 export default function CategoryMethodology({ config }: { config: CategoryConfig }) {
   return (
     <section id="methodology" className="bg-[var(--gray-50)] py-10">
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-[var(--content-width)] mx-auto px-5">
         <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-2">How We Evaluate</h2>
         <p className="text-base text-gray-500 mb-6">Our score is calculated across weighted categories, based on hands-on testing and independent research.</p>
         <div className="space-y-4 mb-8">

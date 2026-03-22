@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="calGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7986CB"/>
+      <stop offset="100%" stop-color="#5C6BC0"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#calGrad)"/>
+  <!-- Calming wave patterns -->
+  <path d="M20 90 Q45 70 70 90 Q95 110 120 90 Q145 70 170 90" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
+  <path d="M20 110 Q45 90 70 110 Q95 130 120 110 Q145 90 170 110" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M20 130 Q45 110 70 130 Q95 150 120 130 Q145 110 170 130" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
+  <!-- C letter centered -->
+  <path d="M125 75 C115 55 90 50 75 60 C55 75 55 125 75 140 C90 150 115 145 125 125" fill="none" stroke="white" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="wpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A8DB5"/>
+      <stop offset="100%" stop-color="#21759B"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#wpGrad)"/>
+  <!-- Inner circle border -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="white" stroke-width="3" opacity="0.2"/>
+  <!-- W letterform -->
+  <path d="M40 70 L58 70 L75 130 L90 85 L100 85 L115 130 L132 70 L150 70 L122 150 L108 150 L95 108 L82 150 L68 150 Z" fill="white"/>
+  <!-- Small decorative circle at top -->
+  <circle cx="100" cy="45" r="5" fill="white" opacity="0.4"/>
+</svg>

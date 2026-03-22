@@ -11,7 +11,7 @@ const experts = [
 export default function ExpertTeam() {
   return (
     <section className="py-12 bg-white">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-[var(--content-width)] mx-auto px-5">
         <div className="text-center mb-8">
           <p className="text-xs font-bold text-[var(--primary)] uppercase tracking-widest mb-2">Meet Our Team</p>
           <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-3">Our Expert Reviewers</h2>

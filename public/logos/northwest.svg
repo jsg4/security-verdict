@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="nwGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#245E4A"/>
+      <stop offset="100%" stop-color="#1B4D3E"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#nwGrad)"/>
+  <!-- N letter - serif style -->
+  <path d="M38 135 L38 65 L48 65 L48 65 L55 65 L55 65 L55 65 L82 120 L82 65 L95 65 L95 135 L82 135 L55 80 L55 135 Z" fill="white"/>
+  <!-- W letter - serif style -->
+  <path d="M100 65 L113 65 L122 115 L133 75 L143 75 L153 115 L162 65 L175 65 L158 135 L147 135 L138 98 L128 135 L117 135 Z" fill="white"/>
+</svg>

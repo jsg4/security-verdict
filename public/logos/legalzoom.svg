@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="lzGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A08F"/>
+      <stop offset="100%" stop-color="#00857C"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded square -->
+  <rect x="15" y="15" width="170" height="170" rx="30" fill="url(#lzGrad)"/>
+  <!-- L letter -->
+  <path d="M40 50 L55 50 L55 125 L88 125 L88 140 L40 140 Z" fill="white"/>
+  <!-- Z letter -->
+  <path d="M95 50 L160 50 L160 65 L115 125 L160 125 L160 140 L95 140 L95 125 L140 65 L95 65 Z" fill="white"/>
+  <!-- Document corner fold -->
+  <path d="M155 15 L185 15 L185 45 Z" fill="#006B63" opacity="0.3"/>
+  <!-- Gavel/scale accent -->
+  <line x1="68" y1="155" x2="132" y2="155" stroke="white" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+  <line x1="100" y1="148" x2="100" y2="165" stroke="white" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+</svg>

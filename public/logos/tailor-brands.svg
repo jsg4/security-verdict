@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="tbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5060FF"/>
+      <stop offset="100%" stop-color="#384CFF"/>
+    </linearGradient>
+  </defs>
+  <!-- Geometric background -->
+  <rect x="15" y="15" width="170" height="170" rx="25" fill="url(#tbGrad)"/>
+  <!-- T - geometric -->
+  <rect x="35" y="55" width="60" height="13" rx="2" fill="white"/>
+  <rect x="58" y="55" width="14" height="90" rx="2" fill="white"/>
+  <!-- B - geometric -->
+  <path d="M110 55 L150 55 C163 55 170 63 170 73 C170 80 166 85 160 87 C167 89 172 96 172 104 C172 115 163 125 150 125 L110 125 Z M124 67 L124 83 L148 83 C154 83 158 79 158 75 C158 71 154 67 148 67 Z M124 95 L124 113 L150 113 C157 113 161 108 161 104 C161 99 157 95 150 95 Z" fill="white"/>
+  <!-- Geometric accent lines -->
+  <line x1="35" y1="150" x2="172" y2="150" stroke="white" stroke-width="3" opacity="0.25" stroke-linecap="round"/>
+  <line x1="35" y1="160" x2="120" y2="160" stroke="white" stroke-width="3" opacity="0.15" stroke-linecap="round"/>
+</svg>

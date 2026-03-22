@@ -42,21 +42,19 @@ export default function QuickCompare({ products }: { products: Product[] }) {
               )}
 
               <div className="px-4 py-3.5">
-                {/* Main row */}
-                <div className="flex items-center gap-3">
+                {/* Desktop layout — single row */}
+                <div className="hidden sm:flex items-center gap-3">
                   <span className="text-[18px] font-bold text-[var(--gray-300)] w-5 text-center flex-shrink-0 tabular-nums">
                     {i + 1}
                   </span>
-
                   <BrandLogo brand={product.slug} size={38} />
-
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
                       <h3 className="text-[15px] font-bold text-[var(--foreground)] truncate">
                         {product.name}
                       </h3>
                       {product.bestFor && (
-                        <span className="hidden sm:inline text-[10px] font-semibold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded-[var(--radius-full)] whitespace-nowrap">
+                        <span className="text-[10px] font-semibold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded-[var(--radius-full)] whitespace-nowrap">
                           {product.bestFor}
                         </span>
                       )}
@@ -68,35 +66,55 @@ export default function QuickCompare({ products }: { products: Product[] }) {
                       </span>
                     </div>
                   </div>
-
-                  {/* Score */}
-                  <div
-                    className={`w-10 h-10 rounded-[var(--radius-sm)] flex items-center justify-center font-bold text-white text-[13px] flex-shrink-0 ${
-                      product.score >= 9
-                        ? "bg-[var(--success)]"
-                        : product.score >= 8
-                          ? "bg-[var(--primary)]"
-                          : "bg-[var(--warning)]"
-                    }`}
-                  >
+                  <div className={`w-10 h-10 rounded-[var(--radius-sm)] flex items-center justify-center font-bold text-white text-[13px] flex-shrink-0 ${
+                    product.score >= 9 ? "bg-[var(--success)]" : product.score >= 8 ? "bg-[var(--primary)]" : "bg-[var(--warning)]"
+                  }`}>
                     {product.score}
                   </div>
-
-                  {/* Price */}
                   <div className="text-right flex-shrink-0 w-[60px]">
                     <p className="text-[15px] font-bold text-[var(--foreground)] leading-none">{product.annualMonthly}</p>
                     <p className="text-[10px] text-[var(--gray-400)] mt-0.5">/month</p>
                   </div>
-
-                  {/* CTA */}
                   <span className="btn-cta text-[13px] px-4 py-2 hidden md:inline-flex flex-shrink-0">
                     Visit Site
                   </span>
                 </div>
 
+                {/* Mobile layout — stacked */}
+                <div className="flex sm:hidden items-start gap-3">
+                  <span className="text-[16px] font-bold text-[var(--gray-300)] w-4 text-center flex-shrink-0 tabular-nums mt-1">
+                    {i + 1}
+                  </span>
+                  <BrandLogo brand={product.slug} size={42} />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-[15px] font-bold text-[var(--foreground)] leading-tight">
+                      {product.name}
+                    </h3>
+                    <div className="flex items-center gap-1.5 mt-1">
+                      <StarRating rating={product.stars} size={11} />
+                      <span className="text-[11px] text-[var(--gray-400)]">
+                        {product.externalReviewCount || product.reviewCount}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2.5 mt-2">
+                      <div className={`w-8 h-8 rounded-[var(--radius-sm)] flex items-center justify-center font-bold text-white text-[12px] flex-shrink-0 ${
+                        product.score >= 9 ? "bg-[var(--success)]" : product.score >= 8 ? "bg-[var(--primary)]" : "bg-[var(--warning)]"
+                      }`}>
+                        {product.score}
+                      </div>
+                      <span className="text-[14px] font-bold text-[var(--foreground)]">{product.annualMonthly}<span className="text-[10px] font-normal text-[var(--gray-400)]">/mo</span></span>
+                      {product.bestFor && (
+                        <span className="text-[10px] font-semibold text-[var(--primary)] bg-[var(--primary-light)] px-1.5 py-0.5 rounded-[var(--radius-full)] whitespace-nowrap">
+                          {product.bestFor}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
                 {/* Deal line */}
                 {(product.promoCode || product.discount) && (
-                  <p className="mt-2 ml-[62px] text-[12px] font-semibold text-[var(--success)]">
+                  <p className="mt-2 sm:ml-[62px] ml-[54px] text-[12px] font-semibold text-[var(--success)]">
                     {product.promoCode
                       ? `${product.discount} — Code: ${product.promoCode}`
                       : product.discount}
@@ -105,7 +123,7 @@ export default function QuickCompare({ products }: { products: Product[] }) {
 
                 {/* Visitor counter */}
                 {isTop && product.weeklyVisitors && (
-                  <p className="mt-1.5 ml-[62px] text-[11px] text-[var(--gray-400)] animate-fade-in-delayed">
+                  <p className="mt-1.5 sm:ml-[62px] ml-[54px] text-[11px] text-[var(--gray-400)] animate-fade-in-delayed">
                     <strong className="text-[var(--gray-500)]">{product.weeklyVisitors}</strong> people visited this week
                   </p>
                 )}

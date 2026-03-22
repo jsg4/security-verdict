@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="lifelockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#004A7C"/>
+      <stop offset="100%" stop-color="#003B64"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#lifelockGrad)"/>
+  <!-- Lock body -->
+  <rect x="65" y="95" width="70" height="55" rx="8" fill="#FFC72C"/>
+  <!-- Lock shackle -->
+  <path d="M75 95 L75 72 C75 50 87 38 100 38 C113 38 125 50 125 72 L125 95" fill="none" stroke="#FFC72C" stroke-width="10" stroke-linecap="round"/>
+  <!-- Keyhole -->
+  <circle cx="100" cy="117" r="10" fill="#003B64"/>
+  <rect x="96" y="117" width="8" height="16" rx="2" fill="#003B64"/>
+</svg>

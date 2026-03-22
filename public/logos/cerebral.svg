@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="cerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8A65"/>
+      <stop offset="100%" stop-color="#FF7043"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#cerGrad)"/>
+  <!-- Brain outline -->
+  <!-- Left hemisphere -->
+  <path d="M100 145 L100 55 C100 55 95 35 78 35 C60 35 50 50 50 65 C40 65 35 78 38 90 C32 95 30 110 40 120 C38 130 42 145 55 150 C65 155 80 152 90 148 L100 145Z" fill="none" stroke="white" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Right hemisphere -->
+  <path d="M100 145 L100 55 C100 55 105 35 122 35 C140 35 150 50 150 65 C160 65 165 78 162 90 C168 95 170 110 160 120 C162 130 158 145 145 150 C135 155 120 152 110 148 L100 145Z" fill="none" stroke="white" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Brain folds -->
+  <path d="M55 80 C70 85 85 75 100 80" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M100 80 C115 85 130 75 145 80" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M50 105 C65 100 80 108 100 105" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M100 105 C120 108 135 100 150 105" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <!-- Stem -->
+  <path d="M100 145 L100 170" stroke="white" stroke-width="4" stroke-linecap="round"/>
+</svg>

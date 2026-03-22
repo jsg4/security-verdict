@@ -7,7 +7,7 @@ export default function PromoBanner({ product }: { product: Product }) {
       href={product.url}
       target="_blank"
       rel="noopener noreferrer nofollow"
-      className="block my-6 bg-gradient-to-r from-[var(--primary-light)] to-blue-50 border-2 border-[var(--primary)] border-dashed rounded-xl p-5 hover:shadow-lg transition-all no-underline text-inherit"
+      className="block my-6 bg-gradient-to-r from-[var(--primary-light)] to-blue-50 border-2 border-[var(--primary)] border-dashed rounded-[var(--radius-lg)] p-5 hover:shadow-lg transition-all no-underline text-inherit"
     >
       <div className="flex flex-col sm:flex-row items-center gap-4">
         <BrandLogo brand={product.slug} size={48} />

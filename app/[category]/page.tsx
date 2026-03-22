@@ -63,7 +63,7 @@ export default async function CategoryPage({ params }: Props) {
         <CategoryHero config={config} />
         <CategorySocialProof config={config} />
         <Disclosure />
-        <div className="max-w-5xl mx-auto px-4 py-6">
+        <div className="max-w-[var(--content-width)] mx-auto px-5 py-6">
           <RecommendationQuiz config={config} />
         </div>
         <CategoryTopPicks config={config} />
@@ -71,8 +71,8 @@ export default async function CategoryPage({ params }: Props) {
         <CategoryShowcase config={config} />
         <QuickCompare products={config.products} />
         <CategoryTableOfContents config={config} />
-        <section id="reviews" className="max-w-4xl mx-auto px-4 py-8">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-8">
+        <section id="reviews" className="max-w-[var(--content-width)] mx-auto px-5 py-8">
+          <h2 className="text-[1.5rem] md:text-[1.75rem] font-extrabold text-[var(--foreground)] tracking-tight mb-6">
             Detailed Reviews
           </h2>
           {config.products.map((product, i) => (
@@ -90,7 +90,7 @@ export default async function CategoryPage({ params }: Props) {
         <CategoryTestimonials config={config} />
         <CategoryEducation config={config} />
         <CategoryMethodology config={config} />
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-[var(--content-width)] mx-auto px-5">
           <CategoryAuthor config={config} />
         </div>
         <CategoryFAQ config={config} />

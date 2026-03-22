@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="auraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B7CF7"/>
+      <stop offset="100%" stop-color="#6C5CE7"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer aura ring -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#6C5CE7" stroke-width="3" opacity="0.3"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#6C5CE7" stroke-width="2" opacity="0.15"/>
+  <!-- Inner filled circle -->
+  <circle cx="100" cy="100" r="70" fill="url(#auraGrad)"/>
+  <!-- Stylized A -->
+  <path d="M100 45 L65 145 L78 145 L86 120 L114 120 L122 145 L135 145 L100 45Z" fill="white"/>
+  <polygon points="90,108 100,75 110,108" fill="#6C5CE7"/>
+  <!-- Aura arcs -->
+  <path d="M100 18 A82 82 0 0 1 182 100" fill="none" stroke="#6C5CE7" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <path d="M18 100 A82 82 0 0 1 100 182" fill="none" stroke="#6C5CE7" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+</svg>

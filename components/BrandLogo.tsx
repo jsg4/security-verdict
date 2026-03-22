@@ -1,3 +1,35 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+
+const BRAND_COLORS: Record<string, { bg: string; fallback: string }> = {
+  // Identity Protection
+  aura: { bg: "#6C5CE7", fallback: "A" },
+  mcafee: { bg: "#C8102E", fallback: "M" },
+  lifelock: { bg: "#003B64", fallback: "L" },
+  "identity-guard": { bg: "#00A4E4", fallback: "IG" },
+  experian: { bg: "#1D4F91", fallback: "E" },
+  // Business Formation
+  zenbusiness: { bg: "#FF6B35", fallback: "Z" },
+  northwest: { bg: "#1B4D3E", fallback: "NW" },
+  legalzoom: { bg: "#00857C", fallback: "LZ" },
+  "tailor-brands": { bg: "#384CFF", fallback: "TB" },
+  "rocket-lawyer": { bg: "#E31837", fallback: "RL" },
+  // Online Therapy
+  betterhelp: { bg: "#2E7D32", fallback: "BH" },
+  talkspace: { bg: "#00BCD4", fallback: "TS" },
+  "online-therapy": { bg: "#7B1FA2", fallback: "OT" },
+  calmerry: { bg: "#5C6BC0", fallback: "CA" },
+  cerebral: { bg: "#FF7043", fallback: "CE" },
+  // Website Builders
+  wix: { bg: "#0C6EFC", fallback: "W" },
+  squarespace: { bg: "#000000", fallback: "S" },
+  shopify: { bg: "#96BF48", fallback: "S" },
+  hostinger: { bg: "#673DE6", fallback: "H" },
+  wordpress: { bg: "#21759B", fallback: "W" },
+};
+
 export default function BrandLogo({
   brand,
   size = 48,
@@ -5,129 +37,38 @@ export default function BrandLogo({
   brand: string;
   size?: number;
 }) {
-  const squareStyle = {
-    width: size,
-    height: size,
-    minWidth: size,
-    minHeight: size,
-    aspectRatio: "1 / 1",
-  } as const;
-  const logos: Record<string, { bg: string; text: string; label: string }> = {
-    // Identity Protection
-    aura: { bg: "#6C5CE7", text: "#FFFFFF", label: "Aura" },
-    mcafee: { bg: "#C8102E", text: "#FFFFFF", label: "McAfee" },
-    lifelock: { bg: "#FFC72C", text: "#1A1A2E", label: "LifeLock" },
-    "identity-guard": { bg: "#00A4E4", text: "#FFFFFF", label: "ID Guard" },
-    experian: { bg: "#1D4F91", text: "#FFFFFF", label: "Experian" },
-    // Business Formation
-    zenbusiness: { bg: "#FF6B35", text: "#FFFFFF", label: "ZB" },
-    northwest: { bg: "#1B4D3E", text: "#FFFFFF", label: "NW" },
-    legalzoom: { bg: "#00857C", text: "#FFFFFF", label: "LZ" },
-    "tailor-brands": { bg: "#384CFF", text: "#FFFFFF", label: "TB" },
-    "rocket-lawyer": { bg: "#E31837", text: "#FFFFFF", label: "RL" },
-    // Online Therapy
-    betterhelp: { bg: "#2E7D32", text: "#FFFFFF", label: "BH" },
-    talkspace: { bg: "#00BCD4", text: "#FFFFFF", label: "TS" },
-    "online-therapy": { bg: "#7B1FA2", text: "#FFFFFF", label: "OT" },
-    calmerry: { bg: "#5C6BC0", text: "#FFFFFF", label: "CA" },
-    cerebral: { bg: "#FF7043", text: "#FFFFFF", label: "CE" },
-    // Website Builders
-    wix: { bg: "#0C6EFC", text: "#FFFFFF", label: "Wix" },
-    squarespace: { bg: "#000000", text: "#FFFFFF", label: "SQ" },
-    shopify: { bg: "#96BF48", text: "#FFFFFF", label: "SH" },
-    hostinger: { bg: "#673DE6", text: "#FFFFFF", label: "HO" },
-    wordpress: { bg: "#21759B", text: "#FFFFFF", label: "WP" },
-  };
+  const info = BRAND_COLORS[brand] || { bg: "#6B7280", fallback: brand.charAt(0).toUpperCase() };
+  const logoPath = `/logos/${brand}.svg`;
+  const [imgError, setImgError] = useState(false);
 
-  const logo = logos[brand] || { bg: "#6B7280", text: "#FFFFFF", label: brand.charAt(0).toUpperCase() };
-
-  // Render brand-specific SVG logos
-  if (brand === "aura") {
-    return (
-      <div
-        className="rounded-xl flex items-center justify-center shadow-sm flex-shrink-0"
-        style={{ ...squareStyle, backgroundColor: logo.bg }}
-      >
-        <svg viewBox="0 0 40 40" width={size * 0.6} height={size * 0.6}>
-          <circle cx="20" cy="20" r="8" fill="none" stroke="white" strokeWidth="3" />
-          <circle cx="20" cy="20" r="3" fill="white" />
-          <path d="M20 8 L20 4" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M20 36 L20 32" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M8 20 L4 20" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M36 20 L32 20" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-        </svg>
-      </div>
-    );
-  }
-
-  if (brand === "mcafee") {
-    return (
-      <div
-        className="rounded-xl flex items-center justify-center shadow-sm flex-shrink-0"
-        style={{ ...squareStyle, backgroundColor: logo.bg }}
-      >
-        <svg viewBox="0 0 40 40" width={size * 0.6} height={size * 0.6}>
-          <path d="M20 6 L8 20 L20 34 L32 20 Z" fill="none" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
-          <path d="M14 20 L18 24 L26 16" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </div>
-    );
-  }
-
-  if (brand === "lifelock") {
-    return (
-      <div
-        className="rounded-xl flex items-center justify-center shadow-sm flex-shrink-0"
-        style={{ ...squareStyle, backgroundColor: logo.bg }}
-      >
-        <svg viewBox="0 0 40 40" width={size * 0.6} height={size * 0.6}>
-          <rect x="14" y="18" width="12" height="10" rx="2" fill="none" stroke="#1A1A2E" strokeWidth="2.5" />
-          <path d="M16 18 V14 A4 4 0 0 1 24 14 V18" fill="none" stroke="#1A1A2E" strokeWidth="2.5" strokeLinecap="round" />
-          <circle cx="20" cy="23" r="1.5" fill="#1A1A2E" />
-        </svg>
-      </div>
-    );
-  }
-
-  if (brand === "identity-guard") {
-    return (
-      <div
-        className="rounded-xl flex items-center justify-center shadow-sm flex-shrink-0"
-        style={{ ...squareStyle, backgroundColor: logo.bg }}
-      >
-        <svg viewBox="0 0 40 40" width={size * 0.6} height={size * 0.6}>
-          <path d="M20 6 L32 12 V22 C32 28 27 33 20 36 C13 33 8 28 8 22 V12 L20 6Z" fill="none" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
-          <path d="M15 20 L18 23 L25 16" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </div>
-    );
-  }
-
-  if (brand === "experian") {
-    return (
-      <div
-        className="rounded-xl flex items-center justify-center shadow-sm flex-shrink-0"
-        style={{ ...squareStyle, backgroundColor: logo.bg }}
-      >
-        <svg viewBox="0 0 40 40" width={size * 0.6} height={size * 0.6}>
-          <circle cx="20" cy="20" r="12" fill="none" stroke="white" strokeWidth="2.5" />
-          <text x="20" y="25" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="sans-serif">E</text>
-        </svg>
-      </div>
-    );
-  }
-
-  // Fallback
   return (
     <div
-      className="rounded-xl flex items-center justify-center shadow-sm font-bold text-sm flex-shrink-0"
+      className="rounded-[var(--radius-md)] flex items-center justify-center flex-shrink-0 overflow-hidden"
       style={{
-        ...squareStyle,
-        backgroundColor: logo.bg,
-        color: logo.text,
+        width: size,
+        height: size,
+        minWidth: size,
+        minHeight: size,
+        backgroundColor: info.bg,
       }}
     >
-      {logo.label.charAt(0)}
+      {imgError ? (
+        <span
+          className="font-bold text-white"
+          style={{ fontSize: size * 0.35, letterSpacing: "-0.02em" }}
+        >
+          {info.fallback}
+        </span>
+      ) : (
+        <Image
+          src={logoPath}
+          alt={brand}
+          width={size}
+          height={size}
+          className="w-full h-full object-contain"
+          onError={() => setImgError(true)}
+        />
+      )}
     </div>
   );
 }

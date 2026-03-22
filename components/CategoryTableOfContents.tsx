@@ -11,7 +11,7 @@ export default function CategoryTableOfContents({ config }: { config: CategoryCo
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-4">
+    <div className="max-w-[var(--content-width)] mx-auto px-5 py-4">
       <div className="bg-[var(--gray-50)] border border-[var(--gray-200)] rounded-lg p-4">
         <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">In this guide</p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">

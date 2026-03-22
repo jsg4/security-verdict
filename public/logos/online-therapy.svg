@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="otGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C27B0"/>
+      <stop offset="100%" stop-color="#7B1FA2"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#otGrad)"/>
+  <!-- Brain/leaf hybrid shape -->
+  <!-- Left hemisphere / leaf -->
+  <path d="M100 40 C70 40 45 60 45 90 C45 115 60 135 80 145 C85 147 90 145 92 140 L100 110 L100 40Z" fill="white" opacity="0.85"/>
+  <!-- Right hemisphere / leaf -->
+  <path d="M100 40 C130 40 155 60 155 90 C155 115 140 135 120 145 C115 147 110 145 108 140 L100 110 L100 40Z" fill="white"/>
+  <!-- Center vein/stem -->
+  <line x1="100" y1="45" x2="100" y2="165" stroke="white" stroke-width="3" opacity="0.5"/>
+  <!-- Leaf veins / brain folds -->
+  <path d="M100 60 C80 70 65 85 60 100" fill="none" stroke="#7B1FA2" stroke-width="2.5" opacity="0.4" stroke-linecap="round"/>
+  <path d="M100 60 C120 70 135 85 140 100" fill="none" stroke="#7B1FA2" stroke-width="2.5" opacity="0.4" stroke-linecap="round"/>
+  <path d="M100 85 C85 92 72 105 68 118" fill="none" stroke="#7B1FA2" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+  <path d="M100 85 C115 92 128 105 132 118" fill="none" stroke="#7B1FA2" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+  <!-- Stem -->
+  <path d="M100 145 C100 155 95 165 92 170" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="shopGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A8D860"/>
+      <stop offset="100%" stop-color="#96BF48"/>
+    </linearGradient>
+  </defs>
+  <!-- Shopping bag -->
+  <path d="M55 55 L65 30 C70 20 80 15 90 15 L110 15 C120 15 130 20 135 30 L145 55 L155 55 L165 175 C165 180 162 185 157 185 L43 185 C38 185 35 180 35 175 L45 55 Z" fill="url(#shopGrad)"/>
+  <!-- Bag top fold -->
+  <path d="M45 55 L155 55 L158 75 L42 75 Z" fill="#82A83E" opacity="0.4"/>
+  <!-- Handle -->
+  <path d="M75 55 L75 42 C75 30 85 22 100 22 C115 22 125 30 125 42 L125 55" fill="none" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <!-- S letter -->
+  <path d="M120 105 C120 90 110 82 100 82 C88 82 78 90 78 100 C78 110 88 115 100 118 C112 121 122 128 122 140 C122 155 112 162 100 162 C88 162 78 155 78 140" fill="none" stroke="white" stroke-width="8" stroke-linecap="round"/>
+</svg>

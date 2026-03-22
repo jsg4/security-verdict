@@ -7,7 +7,7 @@ export default function CategoryFAQ({ config }: { config: CategoryConfig }) {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="max-w-4xl mx-auto px-4 py-10">
+    <section id="faq" className="max-w-[var(--content-width)] mx-auto px-5 py-10">
       <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-2">Frequently Asked Questions</h2>
       <p className="text-gray-500 text-base mb-6">Common questions about {config.title.toLowerCase()} services.</p>
       <div className="space-y-2">

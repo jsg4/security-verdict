@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="rlGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F02040"/>
+      <stop offset="100%" stop-color="#E31837"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#rlGrad)"/>
+  <!-- Rocket body -->
+  <path d="M100 25 C100 25 75 65 75 110 C75 135 85 150 100 155 C115 150 125 135 125 110 C125 65 100 25 100 25Z" fill="white"/>
+  <!-- Rocket window -->
+  <circle cx="100" cy="90" r="12" fill="#E31837"/>
+  <!-- Rocket fins -->
+  <path d="M75 120 L55 150 L75 140 Z" fill="white" opacity="0.9"/>
+  <path d="M125 120 L145 150 L125 140 Z" fill="white" opacity="0.9"/>
+  <!-- Flame -->
+  <path d="M90 155 L100 180 L110 155" fill="#FFC72C"/>
+  <path d="M94 155 L100 172 L106 155" fill="#FF8C00"/>
+</svg>

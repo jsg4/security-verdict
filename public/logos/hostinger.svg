@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="hostGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C4DFF"/>
+      <stop offset="100%" stop-color="#673DE6"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded square -->
+  <rect x="15" y="15" width="170" height="170" rx="30" fill="url(#hostGrad)"/>
+  <!-- H with lightning bolt feel -->
+  <!-- Left vertical -->
+  <path d="M55 45 L75 45 L75 90 L125 90 L125 45 L145 45 L145 155 L125 155 L125 110 L75 110 L75 155 L55 155 Z" fill="white"/>
+  <!-- Lightning accent -->
+  <path d="M148 50 L155 50 L140 100 L155 100 L132 160 L138 105 L125 105 Z" fill="white" opacity="0.3"/>
+</svg>

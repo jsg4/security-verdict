@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="expGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563A8"/>
+      <stop offset="100%" stop-color="#1D4F91"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded square -->
+  <rect x="15" y="15" width="170" height="170" rx="35" fill="url(#expGrad)"/>
+  <!-- Stylized E with curve -->
+  <path d="M60 55 L130 55 L130 70 L80 70 L80 92 L125 92 L125 107 L80 107 L80 130 L135 130 L135 145 L60 145 Z" fill="white"/>
+  <!-- Decorative curve -->
+  <path d="M135 55 C160 55 165 75 160 95 C155 115 145 130 135 145" fill="none" stroke="white" stroke-width="4" opacity="0.5" stroke-linecap="round"/>
+</svg>

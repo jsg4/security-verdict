@@ -39,7 +39,7 @@ export default function CategoryTestimonials({ config }: { config: CategoryConfi
 
   return (
     <section className="bg-[var(--gray-50)] py-12">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-[var(--content-width)] mx-auto px-5">
         <div className="text-center mb-8">
           <p className="text-xs font-bold text-[var(--primary)] uppercase tracking-widest mb-2">Real User Experiences</p>
           <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-3">What People Are Saying</h2>
@@ -51,7 +51,7 @@ export default function CategoryTestimonials({ config }: { config: CategoryConfi
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {getVisible().map((t, i) => (
-            <div key={`${t.name}-${i}`} className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+            <div key={`${t.name}-${i}`} className="bg-white rounded-[var(--radius-lg)] border border-gray-200 p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col">
               <div className="flex items-center gap-3 mb-3">
                 <Image src={t.photo} alt={t.name} width={56} height={56} className="rounded-full object-cover flex-shrink-0" style={{ width: 56, height: 56 }} />
                 <div className="flex-1">

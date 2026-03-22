@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#000000"/>
+  <!-- Interlocking squares pattern - Squarespace logo style -->
+  <!-- Square 1 - rotated 45deg -->
+  <rect x="60" y="60" width="45" height="45" rx="5" fill="none" stroke="white" stroke-width="6" transform="rotate(45 82.5 82.5)"/>
+  <!-- Square 2 - overlapping -->
+  <rect x="80" y="60" width="45" height="45" rx="5" fill="none" stroke="white" stroke-width="6" transform="rotate(45 102.5 82.5)"/>
+  <!-- Square 3 -->
+  <rect x="60" y="80" width="45" height="45" rx="5" fill="none" stroke="white" stroke-width="6" transform="rotate(45 82.5 102.5)" opacity="0.6"/>
+  <!-- Square 4 -->
+  <rect x="80" y="80" width="45" height="45" rx="5" fill="none" stroke="white" stroke-width="6" transform="rotate(45 102.5 102.5)" opacity="0.6"/>
+</svg>

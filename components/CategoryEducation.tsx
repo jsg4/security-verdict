@@ -2,7 +2,7 @@ import { CategoryConfig } from "@/data/types";
 
 export default function CategoryEducation({ config }: { config: CategoryConfig }) {
   return (
-    <section id="learn" className="max-w-4xl mx-auto px-4 py-10">
+    <section id="learn" className="max-w-[var(--content-width)] mx-auto px-5 py-10">
       <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-8">{config.educationalTitle}</h2>
       {config.educationalSections.map((section, i) => {
         if (section.type === "text") {
@@ -35,7 +35,7 @@ export default function CategoryEducation({ config }: { config: CategoryConfig }
         }
         if (section.type === "warning" && section.warnings) {
           return (
-            <div key={i} className="bg-[var(--gold-light)] border border-[var(--gold)] rounded-xl p-6 mb-8">
+            <div key={i} className="bg-[var(--gold-light)] border border-[var(--gold)] rounded-[var(--radius-lg)] p-6 mb-8">
               <h3 className="text-lg font-bold text-[var(--foreground)] mb-3">{section.title}</h3>
               <ul className="grid sm:grid-cols-2 gap-2 text-sm text-gray-700">
                 {section.warnings.map((w, j) => (

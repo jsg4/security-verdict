@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="wixGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A85FF"/>
+      <stop offset="100%" stop-color="#0C6EFC"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded square -->
+  <rect x="15" y="15" width="170" height="170" rx="30" fill="url(#wixGrad)"/>
+  <!-- W -->
+  <path d="M30 70 L48 70 L60 120 L72 80 L83 80 L95 120 L107 70 L125 70 L100 140 L88 140 L77 100 L66 140 L54 140 Z" fill="white" font-weight="bold"/>
+  <!-- i with dot -->
+  <rect x="128" y="85" width="14" height="55" rx="3" fill="white"/>
+  <circle cx="135" cy="72" r="8" fill="white"/>
+  <!-- x -->
+  <path d="M153 85 L165 85 L175 102 L185 85 L185 85" fill="none"/>
+  <path d="M150 85 L170 140 M170 85 L150 140" stroke="white" stroke-width="13" stroke-linecap="round"/>
+</svg>

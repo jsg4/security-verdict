@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="mcafeeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E01A2B"/>
+      <stop offset="100%" stop-color="#C8102E"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield shape -->
+  <path d="M100 15 L175 45 L175 100 C175 145 145 175 100 190 C55 175 25 145 25 100 L25 45 Z" fill="url(#mcafeeGrad)"/>
+  <path d="M100 25 L165 50 L165 100 C165 140 140 167 100 180 C60 167 35 140 35 100 L35 50 Z" fill="#A50D22"/>
+  <path d="M100 35 L155 57 L155 100 C155 135 133 158 100 170 C67 158 45 135 45 100 L45 57 Z" fill="url(#mcafeeGrad)"/>
+  <!-- M letter -->
+  <path d="M60 130 L60 75 L80 75 L100 105 L120 75 L140 75 L140 130 L125 130 L125 100 L105 130 L95 130 L75 100 L75 130 Z" fill="white"/>
+</svg>
