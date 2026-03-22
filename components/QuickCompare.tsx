@@ -106,7 +106,7 @@ export default function QuickCompare({ products }: { products: Product[] }) {
                     </div>
                   </div>
                   {/* Row 2: price + bestFor tag */}
-                  <div className="flex items-center gap-2 mt-2 ml-[54px]">
+                  <div className="flex items-center gap-2 mt-2 ml-[26px]">
                     <span className="text-[13px] font-bold text-[var(--foreground)]">{product.annualMonthly}<span className="text-[10px] font-normal text-[var(--gray-400)]">/mo</span></span>
                     {product.bestFor && (
                       <span className="text-[10px] font-semibold text-[var(--primary)] bg-[var(--primary-light)] px-1.5 py-0.5 rounded-[var(--radius-full)] whitespace-nowrap">
@@ -118,7 +118,7 @@ export default function QuickCompare({ products }: { products: Product[] }) {
 
                 {/* Deal line */}
                 {(product.promoCode || product.discount) && (
-                  <p className="mt-2 ml-[54px] sm:ml-[62px] text-[12px] font-semibold text-[var(--success)]">
+                  <p className="mt-2 ml-[26px] sm:ml-[62px] text-[12px] font-semibold text-[var(--success)]">
                     {product.promoCode
                       ? `${product.discount} — Code: ${product.promoCode}`
                       : product.discount}
@@ -127,7 +127,7 @@ export default function QuickCompare({ products }: { products: Product[] }) {
 
                 {/* Visitor counter */}
                 {isTop && product.weeklyVisitors && (
-                  <p className="mt-1.5 ml-[54px] sm:ml-[62px] text-[11px] text-[var(--gray-400)] animate-fade-in-delayed">
+                  <p className="mt-1.5 ml-[26px] sm:ml-[62px] text-[11px] text-[var(--gray-400)] animate-fade-in-delayed">
                     <strong className="text-[var(--gray-500)]">{product.weeklyVisitors}</strong> people visited this week
                   </p>
                 )}
