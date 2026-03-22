@@ -4,7 +4,7 @@ import StarRating from "./StarRating";
 
 export default function QuickCompare({ products }: { products: Product[] }) {
   return (
-    <section className="max-w-[var(--content-width)] mx-auto px-5 py-10">
+    <section className="max-w-[var(--content-width)] mx-auto px-4 sm:px-5 py-10">
       <div className="flex items-end justify-between mb-5">
         <div>
           <h2 className="text-[1.5rem] md:text-[1.75rem] font-extrabold text-[var(--foreground)] tracking-tight">
@@ -80,34 +80,34 @@ export default function QuickCompare({ products }: { products: Product[] }) {
                   </span>
                 </div>
 
-                {/* Mobile layout — two rows */}
+                {/* Mobile layout */}
                 <div className="sm:hidden">
-                  {/* Row 1: rank, logo, name + stars */}
-                  <div className="flex items-center gap-3">
-                    <span className="text-[16px] font-bold text-[var(--gray-300)] w-4 text-center flex-shrink-0 tabular-nums">
+                  {/* Row 1: rank, logo, name + stars, score */}
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-[15px] font-bold text-[var(--gray-300)] w-4 text-center flex-shrink-0 tabular-nums">
                       {i + 1}
                     </span>
-                    <BrandLogo brand={product.slug} size={42} />
+                    <BrandLogo brand={product.slug} size={38} />
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-[15px] font-bold text-[var(--foreground)] leading-tight">
+                      <h3 className="text-[14px] font-bold text-[var(--foreground)] leading-tight truncate">
                         {product.name}
                       </h3>
                       <div className="flex items-center gap-1.5 mt-0.5">
-                        <StarRating rating={product.stars} size={11} />
-                        <span className="text-[11px] text-[var(--gray-400)]">
+                        <StarRating rating={product.stars} size={10} />
+                        <span className="text-[10px] text-[var(--gray-400)]">
                           {product.externalReviewCount || product.reviewCount}
                         </span>
                       </div>
                     </div>
-                  </div>
-                  {/* Row 2: score, price, bestFor — aligned with name */}
-                  <div className="flex items-center gap-2.5 mt-2 ml-[61px]">
-                    <div className={`w-8 h-8 rounded-[var(--radius-sm)] flex items-center justify-center font-bold text-white text-[12px] flex-shrink-0 ${
+                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center font-extrabold text-white text-[13px] flex-shrink-0 ${
                       product.score >= 9 ? "bg-[var(--success)]" : product.score >= 8 ? "bg-[var(--primary)]" : "bg-[var(--warning)]"
                     }`}>
                       {product.score}
                     </div>
-                    <span className="text-[14px] font-bold text-[var(--foreground)]">{product.annualMonthly}<span className="text-[10px] font-normal text-[var(--gray-400)]">/mo</span></span>
+                  </div>
+                  {/* Row 2: price + bestFor tag */}
+                  <div className="flex items-center gap-2 mt-2 ml-[54px]">
+                    <span className="text-[13px] font-bold text-[var(--foreground)]">{product.annualMonthly}<span className="text-[10px] font-normal text-[var(--gray-400)]">/mo</span></span>
                     {product.bestFor && (
                       <span className="text-[10px] font-semibold text-[var(--primary)] bg-[var(--primary-light)] px-1.5 py-0.5 rounded-[var(--radius-full)] whitespace-nowrap">
                         {product.bestFor}
@@ -118,7 +118,7 @@ export default function QuickCompare({ products }: { products: Product[] }) {
 
                 {/* Deal line */}
                 {(product.promoCode || product.discount) && (
-                  <p className="mt-2 ml-[61px] sm:ml-[62px] text-[12px] font-semibold text-[var(--success)]">
+                  <p className="mt-2 ml-[54px] sm:ml-[62px] text-[12px] font-semibold text-[var(--success)]">
                     {product.promoCode
                       ? `${product.discount} — Code: ${product.promoCode}`
                       : product.discount}
@@ -127,7 +127,7 @@ export default function QuickCompare({ products }: { products: Product[] }) {
 
                 {/* Visitor counter */}
                 {isTop && product.weeklyVisitors && (
-                  <p className="mt-1.5 ml-[61px] sm:ml-[62px] text-[11px] text-[var(--gray-400)] animate-fade-in-delayed">
+                  <p className="mt-1.5 ml-[54px] sm:ml-[62px] text-[11px] text-[var(--gray-400)] animate-fade-in-delayed">
                     <strong className="text-[var(--gray-500)]">{product.weeklyVisitors}</strong> people visited this week
                   </p>
                 )}
