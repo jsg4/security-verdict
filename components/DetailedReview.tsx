@@ -85,7 +85,7 @@ export default function DetailedReview({
         {/* Enhanced Pros and Cons */}
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           {/* PROS */}
-          <div className="bg-[var(--success-light)] rounded-xl p-5 sm:p-6 border border-green-200">
+          <div className="bg-[var(--success-light)] rounded-lg p-5 sm:p-6 border border-green-200">
             <h4 className="text-lg font-extrabold text-[var(--success)] uppercase tracking-wide mb-4 flex items-center gap-2">
               <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
                 <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
@@ -105,7 +105,7 @@ export default function DetailedReview({
           </div>
 
           {/* CONS */}
-          <div className="bg-red-50 rounded-xl p-5 sm:p-6 border border-red-200">
+          <div className="bg-red-50 rounded-lg p-5 sm:p-6 border border-red-200">
             <h4 className="text-lg font-extrabold text-[var(--danger)] uppercase tracking-wide mb-4 flex items-center gap-2">
               <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
                 <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clipRule="evenodd" />
@@ -172,7 +172,7 @@ export default function DetailedReview({
               return (
                 <div
                   key={i}
-                  className="border border-gray-200 rounded-xl p-4 bg-white hover:shadow-sm transition-shadow"
+                  className="border border-gray-200 rounded-lg p-4 bg-white hover:shadow-sm transition-shadow"
                 >
                   <div className="flex items-start gap-3">
                     <div
@@ -253,7 +253,7 @@ export default function DetailedReview({
         </div>
 
         {/* Pricing + CTA */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-[var(--gray-50)] border border-gray-200 rounded-xl px-5 sm:px-6 py-5 gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-[var(--gray-50)] border border-gray-200 rounded-lg px-5 sm:px-6 py-5 gap-4">
           <div>
             <div className="flex items-baseline gap-3 flex-wrap">
               <span className="text-3xl font-extrabold text-[var(--foreground)]">
