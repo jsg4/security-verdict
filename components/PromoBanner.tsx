@@ -7,22 +7,22 @@ export default function PromoBanner({ product }: { product: Product }) {
       href={product.url}
       target="_blank"
       rel="noopener noreferrer nofollow"
-      className="block my-6 bg-gradient-to-r from-[var(--primary-light)] to-blue-50 border-2 border-[var(--primary)] border-dashed rounded-[var(--radius-lg)] p-5 hover:shadow-lg transition-all no-underline text-inherit"
+      className="block my-6 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-[var(--radius-lg)] p-5 hover:shadow-lg transition-all no-underline text-inherit shadow-md"
     >
       <div className="flex flex-col sm:flex-row items-center gap-4">
         <BrandLogo brand={product.slug} size={48} />
         <div className="flex-1 text-center sm:text-left">
-          <p className="text-lg font-extrabold text-[var(--foreground)]">
+          <p className="text-lg font-extrabold text-white">
             Don&apos;t miss this deal on {product.name}
           </p>
           {product.promoCode ? (
-            <p className="text-sm font-bold text-[var(--success)]">
-              {product.discount} — Use code: <span className="bg-white px-2 py-0.5 rounded font-mono border border-green-200">{product.promoCode}</span>
+            <p className="text-sm font-bold text-blue-100">
+              {product.discount} — Use code: <span className="bg-white/20 px-2 py-0.5 rounded-[var(--radius-sm)] font-mono text-white border border-white/30">{product.promoCode}</span>
             </p>
           ) : product.discount ? (
-            <p className="text-sm font-bold text-[var(--success)]">{product.discount}</p>
+            <p className="text-sm font-bold text-blue-100">{product.discount}</p>
           ) : (
-            <p className="text-sm text-gray-500">See current pricing and exclusive offers</p>
+            <p className="text-sm text-blue-100">See current pricing and exclusive offers</p>
           )}
         </div>
         <span className="btn-cta px-6 py-3 text-sm rounded-lg flex-shrink-0">

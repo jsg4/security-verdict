@@ -76,6 +76,14 @@ export default function CategoryReview({ product, rank }: { product: Product; ra
         </div>
 
         <div className="px-4 sm:px-6 py-6">
+          {/* Why We Picked It */}
+          {product.tagline && (
+            <div className="mb-6 bg-[var(--primary-light)] border border-blue-200 rounded-[var(--radius-lg)] p-4">
+              <p className="text-[13px] font-bold text-[var(--primary)] uppercase tracking-wider mb-1">Why We Picked It</p>
+              <p className="text-[15px] text-[var(--gray-700)] leading-relaxed">{product.tagline}</p>
+            </div>
+          )}
+
           {/* Score breakdown */}
           {product.scoreBreakdown && product.scoreBreakdown.length > 0 && (
             <div className="mb-6 grid grid-cols-3 sm:grid-cols-5 gap-2.5">

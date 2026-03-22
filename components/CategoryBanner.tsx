@@ -2,22 +2,23 @@ import { CategoryConfig } from "@/data/types";
 
 export default function CategoryBanner({ config }: { config: CategoryConfig }) {
   return (
-    <section className="bg-[#0d47a1] py-10">
+    <section className="bg-gradient-to-br from-[var(--gray-900)] via-[#0d47a1] to-[var(--gray-900)] py-12">
       <div className="max-w-[var(--content-width)] mx-auto px-5">
         <div className="text-center mb-8">
-          <h2 className="text-xl md:text-2xl font-extrabold text-white mb-2">{config.bannerTitle}</h2>
+          <span className="inline-block px-3 py-1 bg-[var(--cta)] text-white text-[11px] font-bold uppercase tracking-wider rounded-[var(--radius-full)] mb-3">Important</span>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-2">{config.bannerTitle}</h2>
           <p className="text-sm text-blue-200 max-w-2xl mx-auto">{config.bannerSubtitle}</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {config.bannerStats.map((item, i) => (
-            <div key={i} className="bg-white/10 backdrop-blur-sm rounded-[var(--radius-lg)] p-4 text-center border border-white/10">
-              <div className="flex justify-center mb-2">
-                <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
-                  <svg viewBox="0 0 24 24" className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d={item.icon} /></svg>
+            <div key={i} className="bg-white/10 backdrop-blur-sm rounded-[var(--radius-lg)] p-5 text-center border border-white/15 hover:bg-white/15 transition-colors">
+              <div className="flex justify-center mb-3">
+                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d={item.icon} /></svg>
                 </div>
               </div>
-              <p className="text-2xl md:text-3xl font-extrabold text-white mb-1">{item.stat}</p>
-              <p className="text-[11px] text-blue-200 leading-snug">{item.label}</p>
+              <p className="text-3xl md:text-4xl font-extrabold text-white mb-1">{item.stat}</p>
+              <p className="text-[12px] text-blue-200 leading-snug font-medium">{item.label}</p>
             </div>
           ))}
         </div>
