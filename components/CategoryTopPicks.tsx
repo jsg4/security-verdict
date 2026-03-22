@@ -22,16 +22,18 @@ export default function CategoryTopPicks({ config }: { config: CategoryConfig })
                 {product.bestFor || product.badge}
               </span>
             )}
-            <div className="flex items-center gap-3 mb-4 mt-1.5">
-              <BrandLogo brand={product.slug} size={48} />
-              <div className="flex-1 min-w-0">
-                <h3 className="font-extrabold text-[17px] text-[var(--foreground)] tracking-tight">{product.name}</h3>
-                <span className="text-[11px] font-bold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded-[var(--radius-sm)]">{product.ratingLabel}</span>
+            <div className="mb-4 mt-1.5">
+              <div className="flex items-center gap-3">
+                <BrandLogo brand={product.slug} size={44} />
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-extrabold text-[16px] text-[var(--foreground)] tracking-tight leading-snug">{product.name}</h3>
+                  <span className="text-[11px] font-bold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded-[var(--radius-sm)] inline-block mt-0.5">{product.ratingLabel}</span>
+                </div>
               </div>
-              <ScoreRing score={product.score} size={52} />
-            </div>
-            <div className="mb-3">
-              <StarRating rating={product.stars} reviewCount={product.reviewCount} size={14} />
+              <div className="flex items-center justify-between mt-3">
+                <StarRating rating={product.stars} reviewCount={product.reviewCount} size={14} />
+                <ScoreRing score={product.score} size={44} />
+              </div>
             </div>
             {product.discount && (
               <div className="mb-3 flex items-center gap-2 bg-[var(--success-light)] border border-green-200 rounded-[var(--radius-md)] px-3 py-2">

@@ -20,6 +20,7 @@ const BRAND_COLORS: Record<string, { bg: string; fallback: string }> = {
   betterhelp: { bg: "#2E7D32", fallback: "BH" },
   talkspace: { bg: "#00BCD4", fallback: "TS" },
   "online-therapy": { bg: "#7B1FA2", fallback: "OT" },
+  "online-therapy-com": { bg: "#7B1FA2", fallback: "OT" },
   calmerry: { bg: "#5C6BC0", fallback: "CA" },
   cerebral: { bg: "#FF7043", fallback: "CE" },
   // Website Builders
