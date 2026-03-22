@@ -8,6 +8,7 @@ import CategoryTopPicks from "@/components/CategoryTopPicks";
 import CategoryShowcase from "@/components/CategoryShowcase";
 import CategoryTableOfContents from "@/components/CategoryTableOfContents";
 import CategoryReview from "@/components/CategoryReview";
+import QuickCompare from "@/components/QuickCompare";
 import PromoBanner from "@/components/PromoBanner";
 import CategoryComparisonTable from "@/components/CategoryComparisonTable";
 import CategoryBanner from "@/components/CategoryBanner";
@@ -60,8 +61,9 @@ export default async function CategoryPage({ params }: Props) {
         <Disclosure />
         <CategoryTopPicks config={config} />
         <CategoryShowcase config={config} />
+        <QuickCompare products={config.products} />
         <CategoryTableOfContents config={config} />
-        <section id="reviews" className="max-w-5xl mx-auto px-4 py-8">
+        <section id="reviews" className="max-w-4xl mx-auto px-4 py-8">
           <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-8">
             Detailed Reviews
           </h2>
