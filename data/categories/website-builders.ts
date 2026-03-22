@@ -41,8 +41,9 @@ export const websiteBuilders: CategoryConfig = {
       stars: 5,
       reviewCount: "12,483",
       ratingLabel: "Exceptional",
-      discount: "Save 25% on annual plans",
+      discount: "LIMITED: Save 25% on Annual Plans — Start Free Today",
       badge: "Best Overall",
+      bestFor: "Best Overall",
       tagline:
         "The most intuitive drag-and-drop builder with 900+ templates, an AI site generator, and a free plan to get started.",
       url: "#",
@@ -104,8 +105,9 @@ export const websiteBuilders: CategoryConfig = {
       stars: 4.5,
       reviewCount: "9,217",
       ratingLabel: "Excellent",
-      discount: "14-day free trial — no credit card",
+      discount: "TRY FREE: 14-Day Trial — No Credit Card Required",
       badge: "Best Design",
+      bestFor: "Best for Design",
       tagline:
         "Award-winning design templates that make any website look professionally crafted — the gold standard for creatives and portfolios.",
       url: "#",
@@ -167,7 +169,8 @@ export const websiteBuilders: CategoryConfig = {
       stars: 4.5,
       reviewCount: "15,892",
       ratingLabel: "Excellent",
-      discount: "$1/month for first 3 months",
+      discount: "BIGGEST DEAL: Only $1/Month for First 3 Months",
+      bestFor: "Best for Ecommerce",
       badge: "Best for Ecommerce",
       tagline:
         "The #1 ecommerce platform powering millions of online stores — unmatched for selling products online.",
@@ -231,7 +234,8 @@ export const websiteBuilders: CategoryConfig = {
       stars: 4.0,
       reviewCount: "5,641",
       ratingLabel: "Very Good",
-      discount: "Save up to 75% — starting at $2.99/mo",
+      discount: "FLASH SALE: Save 75% — Starting at Just $2.99/mo",
+      bestFor: "Most Affordable",
       tagline:
         "The most affordable website builder with AI-powered design — a full-featured site for less than a cup of coffee.",
       url: "#",
@@ -292,7 +296,8 @@ export const websiteBuilders: CategoryConfig = {
       stars: 4.0,
       reviewCount: "7,329",
       ratingLabel: "Good",
-      discount: "Free plan available",
+      discount: "START FREE: No Credit Card Required — Upgrade Anytime",
+      bestFor: "Best for Blogging",
       tagline:
         "The most flexible website platform on earth — powers 43% of the web with limitless customization for those willing to learn.",
       url: "#",

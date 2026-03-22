@@ -41,8 +41,10 @@ export const onlineTherapy: CategoryConfig = {
       stars: 5,
       reviewCount: "14,832",
       ratingLabel: "Exceptional",
-      discount: "25% off first month",
+      discount: "LIMITED: 25% Off Your First Month — Starts Today",
       badge: "Best Overall",
+      bestFor: "Best Overall",
+      phone: "888-688-9296",
       tagline:
         "The world's largest online therapy platform with 30,000+ licensed therapists and flexible session formats.",
       url: "#",
@@ -105,8 +107,10 @@ export const onlineTherapy: CategoryConfig = {
       stars: 4.5,
       reviewCount: "8,417",
       ratingLabel: "Excellent",
-      discount: "$100 off with code COMPARE100",
+      discount: "EXCLUSIVE: $100 Off — Use Code COMPARE100",
       badge: "Best for Insurance",
+      bestFor: "Best for Insurance",
+      phone: "888-540-6045",
       tagline:
         "Insurance-friendly online therapy and psychiatry with in-network coverage from major providers.",
       url: "#",
@@ -168,7 +172,8 @@ export const onlineTherapy: CategoryConfig = {
       stars: 4.5,
       reviewCount: "3,291",
       ratingLabel: "Excellent",
-      discount: "20% off first month",
+      discount: "MARCH DEAL: 20% Off First Month + Free Worksheets",
+      bestFor: "Best CBT Tools",
       tagline:
         "CBT-focused therapy platform with integrated worksheets, yoga videos, and journaling tools.",
       url: "#",
@@ -228,7 +233,8 @@ export const onlineTherapy: CategoryConfig = {
       stars: 4.0,
       reviewCount: "2,108",
       ratingLabel: "Very Good",
-      discount: "30% off first month",
+      discount: "LIMITED: 30% Off First Month — No Commitment",
+      bestFor: "Most Affordable",
       tagline:
         "Budget-friendly online therapy with personalized matching and flexible scheduling.",
       url: "#",
@@ -289,7 +295,8 @@ export const onlineTherapy: CategoryConfig = {
       stars: 4.0,
       reviewCount: "5,634",
       ratingLabel: "Very Good",
-      discount: "First month 50% off",
+      discount: "BIGGEST DEAL: 50% Off First Month — Therapy + Medication",
+      bestFor: "Best for Medication",
       tagline:
         "Integrated therapy, psychiatry, and medication management under one roof.",
       url: "#",

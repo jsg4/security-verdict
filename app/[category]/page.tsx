@@ -17,6 +17,9 @@ import CategoryEducation from "@/components/CategoryEducation";
 import CategoryMethodology from "@/components/CategoryMethodology";
 import CategoryAuthor from "@/components/CategoryAuthor";
 import CategoryFAQ from "@/components/CategoryFAQ";
+import RecommendationQuiz from "@/components/RecommendationQuiz";
+import EmailCapture from "@/components/EmailCapture";
+import SchemaMarkup from "@/components/SchemaMarkup";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Footer from "@/components/Footer";
 import { getCategory, getAllCategorySlugs } from "@/data/categories";
@@ -54,12 +57,17 @@ export default async function CategoryPage({ params }: Props) {
 
   return (
     <>
+      <SchemaMarkup config={config} />
       <Header />
       <main className="flex-1">
         <CategoryHero config={config} />
         <CategorySocialProof config={config} />
         <Disclosure />
+        <div className="max-w-5xl mx-auto px-4 py-6">
+          <RecommendationQuiz config={config} />
+        </div>
         <CategoryTopPicks config={config} />
+        <EmailCapture config={config} />
         <CategoryShowcase config={config} />
         <QuickCompare products={config.products} />
         <CategoryTableOfContents config={config} />

@@ -41,7 +41,7 @@ export const identityProtection: CategoryConfig = {
       stars: 4.5,
       reviewCount: "2,847",
       ratingLabel: "Exceptional",
-      discount: "Save 25% on annual plans",
+      discount: "LIMITED: Save 25% — All Plans Include 3-Bureau Monitoring",
       badge: "Best Overall",
       bestFor: "Best Overall",
       tagline:
@@ -113,7 +113,7 @@ export const identityProtection: CategoryConfig = {
       stars: 4.5,
       reviewCount: "4,312",
       ratingLabel: "Excellent",
-      discount: "Save up to 68%",
+      discount: "BIGGEST DEAL: Save Up to 68% Today",
       badge: "Best Value Bundle",
       bestFor: "Best Value",
       promoCode: "PROTECT68",
@@ -186,7 +186,7 @@ export const identityProtection: CategoryConfig = {
       stars: 4.0,
       reviewCount: "8,921",
       ratingLabel: "Excellent",
-      discount: "30-day free trial available",
+      discount: "TRY FREE: 30-Day Trial — Up to $3M in Coverage",
       bestFor: "Best Insurance Coverage",
       tagline:
         "The most recognized name in identity protection with up to $3M in insurance coverage.",
@@ -251,7 +251,7 @@ export const identityProtection: CategoryConfig = {
       stars: 4.0,
       reviewCount: "1,563",
       ratingLabel: "Very Good",
-      discount: "Save 52% on annual plans",
+      discount: "FAMILY DEAL: Save 52% on Annual Plans",
       bestFor: "Best for Families",
       tagline:
         "IBM Watson AI-powered identity monitoring with affordable family plans.",
@@ -314,7 +314,7 @@ export const identityProtection: CategoryConfig = {
       stars: 3.5,
       reviewCount: "3,204",
       ratingLabel: "Good",
-      discount: "30-day free trial",
+      discount: "START FREE: 30-Day Trial — Direct From the Bureau",
       bestFor: "Best Credit Monitoring",
       tagline:
         "Direct from the credit bureau \u2014 the most authoritative credit monitoring available.",
