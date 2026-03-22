@@ -41,34 +41,47 @@ export default function BrandLogo({
   const logoPath = `/logos/${brand}.svg`;
   const [imgError, setImgError] = useState(false);
 
-  return (
-    <div
-      className="rounded-[var(--radius-md)] flex items-center justify-center flex-shrink-0 overflow-hidden"
-      style={{
-        width: size,
-        height: size,
-        minWidth: size,
-        minHeight: size,
-        backgroundColor: info.bg,
-      }}
-    >
-      {imgError ? (
+  if (imgError) {
+    return (
+      <div
+        className="rounded-[var(--radius-md)] flex items-center justify-center flex-shrink-0"
+        style={{
+          width: size,
+          height: size,
+          minWidth: size,
+          minHeight: size,
+          backgroundColor: info.bg,
+        }}
+      >
         <span
           className="font-bold text-white"
           style={{ fontSize: size * 0.35, letterSpacing: "-0.02em" }}
         >
           {info.fallback}
         </span>
-      ) : (
-        <Image
-          src={logoPath}
-          alt={brand}
-          width={size}
-          height={size}
-          className="w-full h-full object-contain"
-          onError={() => setImgError(true)}
-        />
-      )}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="rounded-[var(--radius-md)] flex items-center justify-center flex-shrink-0 overflow-hidden bg-white border border-[var(--gray-100)]"
+      style={{
+        width: size,
+        height: size,
+        minWidth: size,
+        minHeight: size,
+      }}
+    >
+      <Image
+        src={logoPath}
+        alt={brand}
+        width={size}
+        height={size}
+        className="w-full h-full object-contain"
+        style={{ padding: size * 0.04 }}
+        onError={() => setImgError(true)}
+      />
     </div>
   );
 }
