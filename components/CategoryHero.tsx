@@ -34,26 +34,57 @@ export default function CategoryHero({ config }: { config: CategoryConfig }) {
           {config.heroSubtitle}
         </p>
 
-        {/* Author byline */}
-        <div className="flex items-center gap-3 mb-6">
-          <Image
-            src={config.author.photo}
-            alt={config.author.name}
-            width={44}
-            height={44}
-            className="rounded-full object-cover flex-shrink-0 ring-2 ring-white shadow-sm"
-            style={{ width: 44, height: 44 }}
-          />
-          <div>
-            <div className="flex items-center gap-1">
-              <span className="font-semibold text-[14px] text-[var(--foreground)]">
+        {/* Author byline — stacked on mobile, inline on desktop */}
+        <div className="mb-6">
+          {/* Name row: photo + name + verified badge — always inline */}
+          <div className="flex items-center gap-2.5 mb-2">
+            <Image
+              src={config.author.photo}
+              alt={config.author.name}
+              width={40}
+              height={40}
+              className="rounded-full object-cover flex-shrink-0 ring-2 ring-white shadow-sm"
+              style={{ width: 40, height: 40 }}
+            />
+            <div className="flex items-center gap-1.5 min-w-0">
+              <span className="font-bold text-[15px] text-[var(--foreground)] whitespace-nowrap">
                 {config.author.name}
               </span>
-              <svg viewBox="0 0 24 24" className="w-[15px] h-[15px] text-[var(--primary)]" fill="currentColor">
+              <svg viewBox="0 0 24 24" className="w-[16px] h-[16px] text-[var(--primary)] flex-shrink-0" fill="currentColor">
                 <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
               </svg>
+              <span className="text-[12px] font-semibold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded whitespace-nowrap">
+                Verified Expert
+              </span>
             </div>
-            <p className="text-[12px] text-[var(--gray-500)]">{config.author.title}</p>
+          </div>
+          {/* Title + credentials — full width below on mobile */}
+          <div className="pl-[52px] md:pl-[52px]">
+            <p className="text-[13px] font-medium text-[var(--gray-600)] mb-2">{config.author.title}</p>
+            {config.author.credentials && config.author.credentials.length > 0 && (
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                {config.author.credentials.map((cred, i) => (
+                  <span key={i} className="inline-flex items-center gap-1.5 text-[12px] text-[var(--gray-500)]">
+                    {cred.icon === "article" && (
+                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[var(--gray-400)]" fill="none" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                      </svg>
+                    )}
+                    {cred.icon === "certification" && (
+                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[var(--gray-400)]" fill="none" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.745 3.745 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                      </svg>
+                    )}
+                    {cred.icon === "clock" && (
+                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[var(--gray-400)]" fill="none" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    )}
+                    <span className="font-medium">{cred.label}</span>
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
