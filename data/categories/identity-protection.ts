@@ -245,7 +245,7 @@ export const identityProtection: CategoryConfig = {
     {
       slug: "identity-guard",
       name: "Identity Guard",
-      logo: "/logos/identityguard.svg",
+      logo: "/logos/identity-guard.svg",
       logoColor: "#00A4E4",
       score: 8.7,
       stars: 4.0,
@@ -313,7 +313,7 @@ export const identityProtection: CategoryConfig = {
       score: 8.4,
       stars: 3.5,
       reviewCount: "3,204",
-      ratingLabel: "Good",
+      ratingLabel: "Very Good",
       discount: "START FREE: 30-Day Trial — Direct From the Bureau",
       bestFor: "Best Credit Monitoring",
       tagline:

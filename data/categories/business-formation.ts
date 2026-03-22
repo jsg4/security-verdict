@@ -167,7 +167,7 @@ export const businessFormation: CategoryConfig = {
       stars: 4.0,
       reviewCount: "12,483",
       ratingLabel: "Very Good",
-      discount: "TODAY ONLY: $0 Formation + Free Compliance Review",
+      discount: "SPECIAL: $0 Formation + Free Compliance Review",
       bestFor: "Best for Legal Add-Ons",
       phone: "800-773-0888",
       tagline:
@@ -224,13 +224,13 @@ export const businessFormation: CategoryConfig = {
     {
       slug: "tailor-brands",
       name: "Tailor Brands",
-      logo: "/logos/tailorbrands.svg",
+      logo: "/logos/tailor-brands.svg",
       logoColor: "#FF6B35",
       score: 8.6,
       stars: 4.0,
       reviewCount: "2,156",
       ratingLabel: "Very Good",
-      discount: "MARCH DEAL: $0 Formation + Free Logo Design",
+      discount: "LIMITED: $0 Formation + Free Logo Design",
       bestFor: "Best for Branding",
       badge: "Best All-in-One",
       tagline:
@@ -287,7 +287,7 @@ export const businessFormation: CategoryConfig = {
     {
       slug: "rocket-lawyer",
       name: "Rocket Lawyer",
-      logo: "/logos/rocketlawyer.svg",
+      logo: "/logos/rocket-lawyer.svg",
       logoColor: "#C62828",
       score: 8.3,
       stars: 4.0,

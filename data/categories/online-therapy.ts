@@ -166,13 +166,13 @@ export const onlineTherapy: CategoryConfig = {
     {
       slug: "online-therapy-com",
       name: "Online-Therapy.com",
-      logo: "/logos/online-therapy.svg",
+      logo: "/logos/online-therapy-com.svg",
       logoColor: "#5B9BD5",
       score: 8.9,
       stars: 4.5,
       reviewCount: "3,291",
       ratingLabel: "Excellent",
-      discount: "MARCH DEAL: 20% Off First Month + Free Worksheets",
+      discount: "LIMITED: 20% Off First Month + Free Worksheets",
       bestFor: "Best CBT Tools",
       tagline:
         "CBT-focused therapy platform with integrated worksheets, yoga videos, and journaling tools.",
