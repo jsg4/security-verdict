@@ -25,6 +25,15 @@ export interface Product {
   productImageAlt?: string;
   // Dynamic spec fields — each category defines which ones to use
   specs: Record<string, string | boolean | number>;
+  // New CRO fields
+  phone?: string;
+  promoCode?: string;
+  weeklyVisitors?: string;
+  externalReviewCount?: string;
+  externalReviewSource?: string;
+  bestFor?: string;
+  scoreBreakdown?: { label: string; score: number }[];
+  useCases?: string[];
 }
 
 export interface ComparisonRow {
@@ -76,12 +85,26 @@ export interface Author {
   title: string;
   bio: string;
   credentials: { icon: string; label: string }[];
+  linkedin?: string;
+  twitter?: string;
 }
 
 export interface ShowcaseFeature {
   title: string;
   desc: string;
   icon: string;
+}
+
+export interface UseCaseTab {
+  label: string;
+  filter: string;
+}
+
+export interface ExpertTeamMember {
+  name: string;
+  photo: string;
+  title: string;
+  category: string;
 }
 
 export interface CategoryConfig {
@@ -107,6 +130,9 @@ export interface CategoryConfig {
 
   // Comparison table
   comparisonRows: ComparisonRow[];
+
+  // Use-case filter tabs
+  useCaseTabs?: UseCaseTab[];
 
   // Showcase section
   showcaseLabel: string;

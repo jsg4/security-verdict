@@ -153,3 +153,24 @@ a.no-underline:visited {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(255, 74, 100, 0.3);
 }
+
+/* Visitor counter delayed fade-in */
+@keyframes fadeInDelayed {
+  0% { opacity: 0; }
+  60% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-fade-in-delayed {
+  animation: fadeInDelayed 3s ease forwards;
+}
+
+/* Sticky mobile CTA slide up */
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease forwards;
+}

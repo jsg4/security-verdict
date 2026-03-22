@@ -43,6 +43,7 @@ export const identityProtection: CategoryConfig = {
       ratingLabel: "Exceptional",
       discount: "Save 25% on annual plans",
       badge: "Best Overall",
+      bestFor: "Best Overall",
       tagline:
         "All-in-one identity protection with 3-bureau credit monitoring on every plan.",
       url: "#",
@@ -52,6 +53,17 @@ export const identityProtection: CategoryConfig = {
       annualMonthly: "$9/mo",
       freeTrial: "14 days",
       moneyBack: "60 days",
+      phone: "855-815-7387",
+      weeklyVisitors: "8,412",
+      externalReviewCount: "4,891",
+      externalReviewSource: "Trustpilot",
+      scoreBreakdown: [
+        { label: "Monitoring", score: 9.8 },
+        { label: "Credit", score: 9.7 },
+        { label: "Value", score: 9.5 },
+        { label: "Security", score: 9.4 },
+        { label: "Support", score: 9.6 },
+      ],
       specs: {
         identityInsurance: "$1,000,000",
         creditMonitoring: "3-bureau (all plans)",
@@ -101,8 +113,10 @@ export const identityProtection: CategoryConfig = {
       stars: 4.5,
       reviewCount: "4,312",
       ratingLabel: "Excellent",
-      discount: "Save up to 68% \u2014 first year",
+      discount: "Save up to 68%",
       badge: "Best Value Bundle",
+      bestFor: "Best Value",
+      promoCode: "PROTECT68",
       tagline:
         "World-class antivirus meets comprehensive identity protection \u2014 best all-in-one security suite.",
       url: "#",
@@ -112,6 +126,15 @@ export const identityProtection: CategoryConfig = {
       annualMonthly: "$7.49/mo",
       freeTrial: "None",
       moneyBack: "30 days",
+      externalReviewCount: "12,847",
+      externalReviewSource: "Trustpilot",
+      scoreBreakdown: [
+        { label: "Antivirus", score: 9.8 },
+        { label: "Value", score: 9.5 },
+        { label: "Features", score: 9.0 },
+        { label: "Security", score: 9.2 },
+        { label: "Support", score: 8.8 },
+      ],
       specs: {
         identityInsurance: "$1,000,000 - $2,000,000",
         creditMonitoring: "1-bureau (Advanced) / 3-bureau (Ultimate)",
@@ -164,6 +187,7 @@ export const identityProtection: CategoryConfig = {
       reviewCount: "8,921",
       ratingLabel: "Excellent",
       discount: "30-day free trial available",
+      bestFor: "Best Insurance Coverage",
       tagline:
         "The most recognized name in identity protection with up to $3M in insurance coverage.",
       url: "#",
@@ -173,6 +197,9 @@ export const identityProtection: CategoryConfig = {
       annualMonthly: "$7.50/mo",
       freeTrial: "30 days",
       moneyBack: "60 days",
+      phone: "800-416-0599",
+      externalReviewCount: "12,999",
+      externalReviewSource: "Trustpilot",
       specs: {
         identityInsurance: "$25,000 - $3,000,000",
         creditMonitoring: "1-bureau (Standard) / 3-bureau (Ultimate Plus)",
@@ -225,6 +252,7 @@ export const identityProtection: CategoryConfig = {
       reviewCount: "1,563",
       ratingLabel: "Very Good",
       discount: "Save 52% on annual plans",
+      bestFor: "Best for Families",
       tagline:
         "IBM Watson AI-powered identity monitoring with affordable family plans.",
       url: "#",
@@ -234,6 +262,9 @@ export const identityProtection: CategoryConfig = {
       annualMonthly: "$7.50/mo",
       freeTrial: "None",
       moneyBack: "30 days",
+      phone: "855-443-7748",
+      externalReviewCount: "3,241",
+      externalReviewSource: "Trustpilot",
       specs: {
         identityInsurance: "$1,000,000",
         creditMonitoring: "3-bureau (Ultra plan)",
@@ -284,6 +315,7 @@ export const identityProtection: CategoryConfig = {
       reviewCount: "3,204",
       ratingLabel: "Good",
       discount: "30-day free trial",
+      bestFor: "Best Credit Monitoring",
       tagline:
         "Direct from the credit bureau \u2014 the most authoritative credit monitoring available.",
       url: "#",
@@ -293,6 +325,8 @@ export const identityProtection: CategoryConfig = {
       annualMonthly: "$20.83/mo",
       freeTrial: "30 days",
       moneyBack: "None",
+      externalReviewCount: "18,432",
+      externalReviewSource: "Trustpilot",
       specs: {
         identityInsurance: "$1,000,000",
         creditMonitoring: "3-bureau",

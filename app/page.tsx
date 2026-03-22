@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ExpertTeam from "@/components/ExpertTeam";
 import { getAllCategories } from "@/data/categories";
 import Link from "next/link";
 import Image from "next/image";
@@ -72,11 +73,11 @@ export default function Home() {
               </span>
               <span className="flex items-center gap-1.5">
                 <svg viewBox="0 0 24 24" className="w-5 h-5 text-[var(--success)]" fill="currentColor"><path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" /></svg>
-                <strong className="text-[var(--foreground)]">500+</strong> Hours of Research
+                <strong className="text-[var(--foreground)]">5,000+</strong> Hours of Research
               </span>
               <span className="flex items-center gap-1.5">
                 <svg viewBox="0 0 24 24" className="w-5 h-5 text-[var(--success)]" fill="currentColor"><path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" /></svg>
-                <strong className="text-[var(--foreground)]">100K+</strong> Readers Helped
+                <strong className="text-[var(--foreground)]">1M+</strong> Decisions Made
               </span>
             </div>
 
@@ -190,6 +191,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* GAP #8: Expert Team */}
+        <ExpertTeam />
+
         {/* Trust Banner */}
         <section className="bg-[#0d47a1] py-10">
           <div className="max-w-4xl mx-auto px-4 text-center">
@@ -202,8 +206,8 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto mb-8">
               {[
                 { stat: "50+", label: "Products Tested" },
-                { stat: "500+", label: "Hours of Research" },
-                { stat: "100K+", label: "Readers Helped" },
+                { stat: "5,000+", label: "Hours of Research" },
+                { stat: "1M+", label: "Decisions Made" },
               ].map((s, i) => (
                 <div key={i} className="bg-white/10 rounded-xl p-3 border border-white/10">
                   <p className="text-2xl font-extrabold text-white">{s.stat}</p>

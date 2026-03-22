@@ -8,6 +8,7 @@ import CategoryTopPicks from "@/components/CategoryTopPicks";
 import CategoryShowcase from "@/components/CategoryShowcase";
 import CategoryTableOfContents from "@/components/CategoryTableOfContents";
 import CategoryReview from "@/components/CategoryReview";
+import PromoBanner from "@/components/PromoBanner";
 import CategoryComparisonTable from "@/components/CategoryComparisonTable";
 import CategoryBanner from "@/components/CategoryBanner";
 import CategoryTestimonials from "@/components/CategoryTestimonials";
@@ -15,6 +16,7 @@ import CategoryEducation from "@/components/CategoryEducation";
 import CategoryMethodology from "@/components/CategoryMethodology";
 import CategoryAuthor from "@/components/CategoryAuthor";
 import CategoryFAQ from "@/components/CategoryFAQ";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Footer from "@/components/Footer";
 import { getCategory, getAllCategorySlugs } from "@/data/categories";
 
@@ -46,6 +48,9 @@ export default async function CategoryPage({ params }: Props) {
   const config = getCategory(category);
   if (!config) notFound();
 
+  // Insert promo banner after product #3 (GAP #5)
+  const promoProduct = config.products[0];
+
   return (
     <>
       <Header />
@@ -56,12 +61,18 @@ export default async function CategoryPage({ params }: Props) {
         <CategoryTopPicks config={config} />
         <CategoryShowcase config={config} />
         <CategoryTableOfContents config={config} />
-        <section id="reviews" className="max-w-4xl mx-auto px-4 py-8">
+        <section id="reviews" className="max-w-5xl mx-auto px-4 py-8">
           <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--foreground)] mb-8">
             Detailed Reviews
           </h2>
           {config.products.map((product, i) => (
-            <CategoryReview key={product.slug} product={product} rank={i + 1} />
+            <div key={product.slug}>
+              <CategoryReview product={product} rank={i + 1} />
+              {/* GAP #5: Promo banner between product #3 and #4 */}
+              {i === 2 && config.products.length > 3 && (
+                <PromoBanner product={promoProduct} />
+              )}
+            </div>
           ))}
         </section>
         <CategoryComparisonTable config={config} />
@@ -75,6 +86,8 @@ export default async function CategoryPage({ params }: Props) {
         <CategoryFAQ config={config} />
       </main>
       <Footer />
+      {/* GAP #12: Sticky mobile bottom CTA */}
+      <StickyMobileCTA product={config.products[0]} />
     </>
   );
 }
