@@ -15,12 +15,14 @@ export default function PromoBanner({ product }: { product: Product }) {
           <p className="text-lg font-extrabold text-white">
             Don&apos;t miss this deal on {product.name}
           </p>
-          {product.promoCode ? (
-            <p className="text-sm font-bold text-blue-100">
-              {product.discount} — Use code: <span className="bg-white/20 px-2 py-0.5 rounded-[var(--radius-sm)] font-mono text-white border border-white/30">{product.promoCode}</span>
-            </p>
-          ) : product.discount ? (
-            <p className="text-sm font-bold text-blue-100">{product.discount}</p>
+          {product.deal?.active ? (
+            product.deal.promoCode ? (
+              <p className="text-sm font-bold text-blue-100">
+                {product.deal.text} — Use code: <span className="bg-white/20 px-2 py-0.5 rounded-[var(--radius-sm)] font-mono text-white border border-white/30">{product.deal.promoCode}</span>
+              </p>
+            ) : (
+              <p className="text-sm font-bold text-blue-100">{product.deal.text}</p>
+            )
           ) : (
             <p className="text-sm text-blue-100">See current pricing and exclusive offers</p>
           )}

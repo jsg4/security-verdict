@@ -42,7 +42,6 @@ export default function CategoryReview({ product, rank }: { product: Product; ra
                 <div className="flex items-center gap-2 flex-wrap">
                   <h3 className="text-[1.25rem] sm:text-[1.5rem] font-extrabold text-[var(--foreground)] tracking-tight">#{rank} {product.name}</h3>
                   {product.bestFor && <span className="px-2.5 py-0.5 bg-[var(--primary)] text-white text-[11px] font-bold rounded-[var(--radius-full)]">{product.bestFor}</span>}
-                  {!product.bestFor && product.badge && <span className="px-2.5 py-0.5 bg-[var(--primary)] text-white text-[11px] font-bold rounded-[var(--radius-full)]">{product.badge}</span>}
                 </div>
                 <p className="text-[14px] text-[var(--gray-500)] mt-1">{product.tagline}</p>
                 <div className="flex items-center gap-3 mt-2 flex-wrap">
@@ -52,17 +51,14 @@ export default function CategoryReview({ product, rank }: { product: Product; ra
                   )}
                   <span className="text-[11px] font-bold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded-[var(--radius-sm)]">{product.ratingLabel}</span>
                 </div>
-                {product.promoCode ? (
+                {product.deal?.active && (
                   <p className="mt-2 text-[13px] font-bold text-[var(--success)] flex items-center gap-1.5">
                     <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor"><path fillRule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39.92 3.31 0l4.318-4.318a2.25 2.25 0 000-3.182l-9.58-9.581A3 3 0 008.568 2.25H5.25zm1.5 4.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clipRule="evenodd" /></svg>
-                    {product.discount} — Use code: <span className="bg-[var(--success-light)] px-1.5 py-0.5 rounded-[var(--radius-sm)] font-mono text-[var(--success)]">{product.promoCode}</span>
+                    {product.deal.promoCode
+                      ? <>{product.deal.text} — Use code: <span className="bg-[var(--success-light)] px-1.5 py-0.5 rounded-[var(--radius-sm)] font-mono text-[var(--success)]">{product.deal.promoCode}</span></>
+                      : product.deal.text}
                   </p>
-                ) : product.discount ? (
-                  <p className="mt-2 text-[13px] font-bold text-[var(--success)] flex items-center gap-1.5">
-                    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor"><path fillRule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39.92 3.31 0l4.318-4.318a2.25 2.25 0 000-3.182l-9.58-9.581A3 3 0 008.568 2.25H5.25zm1.5 4.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clipRule="evenodd" /></svg>
-                    {product.discount}
-                  </p>
-                ) : null}
+                )}
               </div>
             </div>
             <div className="flex items-center gap-3 flex-shrink-0">

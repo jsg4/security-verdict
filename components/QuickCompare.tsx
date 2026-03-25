@@ -117,11 +117,11 @@ export default function QuickCompare({ products }: { products: Product[] }) {
                 </div>
 
                 {/* Deal line */}
-                {(product.promoCode || product.discount) && (
+                {product.deal?.active && (
                   <p className="mt-2 ml-[26px] sm:ml-[62px] text-[12px] font-semibold text-[var(--success)]">
-                    {product.promoCode
-                      ? `${product.discount} — Code: ${product.promoCode}`
-                      : product.discount}
+                    {product.deal.promoCode
+                      ? `${product.deal.text} — Code: ${product.deal.promoCode}`
+                      : product.deal.text}
                   </p>
                 )}
 

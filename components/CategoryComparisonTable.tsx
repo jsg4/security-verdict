@@ -26,7 +26,7 @@ export default function CategoryComparisonTable({ config }: { config: CategoryCo
                   <div className="flex flex-col items-center gap-2">
                     <BrandLogo brand={p.slug} size={36} />
                     <span className="font-bold text-[var(--foreground)] text-sm">{p.name}</span>
-                    {p.badge && <span className="text-[10px] font-semibold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded-full">{p.badge}</span>}
+                    {p.bestFor && <span className="text-[10px] font-semibold text-[var(--primary)] bg-[var(--primary-light)] px-2 py-0.5 rounded-full">{p.bestFor}</span>}
                   </div>
                 </th>
               ))}

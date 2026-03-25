@@ -17,9 +17,9 @@ export default function CategoryTopPicks({ config }: { config: CategoryConfig })
       <div className="grid gap-4 md:grid-cols-3">
         {products.map((product, i) => (
           <div key={product.slug} className={`relative rounded-[var(--radius-lg)] border-2 p-5 flex flex-col transition-all hover:shadow-lg hover:-translate-y-0.5 ${i === 0 ? "border-[var(--gold)] bg-[var(--gold-light)]" : "border-[var(--gray-200)] bg-white"}`}>
-            {(product.bestFor || product.badge) && (
+            {product.bestFor && (
               <span className={`absolute -top-3 left-4 px-3 py-0.5 rounded-[var(--radius-full)] text-[11px] font-bold shadow-sm ${i === 0 ? "bg-[var(--gold)] text-white" : "bg-[var(--primary)] text-white"}`}>
-                {product.bestFor || product.badge}
+                {product.bestFor}
               </span>
             )}
             <div className="mb-4 mt-1.5">
@@ -35,12 +35,12 @@ export default function CategoryTopPicks({ config }: { config: CategoryConfig })
                 <ScoreRing score={product.score} size={44} />
               </div>
             </div>
-            {product.discount && (
+            {product.deal?.active && (
               <div className="mb-3 flex items-center gap-2 bg-[var(--success-light)] border border-green-200 rounded-[var(--radius-md)] px-3 py-2">
                 <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[var(--success)] flex-shrink-0" fill="currentColor">
                   <path fillRule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39.92 3.31 0l4.318-4.318a2.25 2.25 0 000-3.182l-9.58-9.581A3 3 0 008.568 2.25H5.25zm1.5 4.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clipRule="evenodd" />
                 </svg>
-                <span className="text-[12px] font-bold text-[var(--success)]">{product.discount}</span>
+                <span className="text-[12px] font-bold text-[var(--success)]">{product.deal.text}</span>
               </div>
             )}
             <p className="text-[13px] text-[var(--gray-600)] mb-4 flex-1 leading-relaxed">{product.tagline}</p>
