@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const categories = [
   { label: "Identity Protection", href: "/identity-protection" },
@@ -26,7 +27,7 @@ export default function Header() {
     <header className={`sticky top-0 z-50 bg-[var(--primary)] shadow-md transition-all duration-300 ${scrolled ? "shadow-lg" : ""}`}>
       <div className={`max-w-[var(--wide-width)] mx-auto px-5 flex items-center justify-between transition-all duration-300 ${scrolled ? "h-11" : "h-14"}`}>
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2.5 group flex-shrink-0">
+        <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
           <div className={`bg-white/20 rounded-[var(--radius-sm)] flex items-center justify-center transition-all duration-300 ${scrolled ? "w-6 h-6" : "w-7 h-7"}`}>
             <svg viewBox="0 0 24 24" className={`text-white transition-all duration-300 ${scrolled ? "w-3.5 h-3.5" : "w-4 h-4"}`} fill="none" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
@@ -35,7 +36,7 @@ export default function Header() {
           <span className={`font-semibold text-white tracking-tight transition-all duration-300 ${scrolled ? "text-[14px]" : "text-[15px]"}`}>
             Trusted Scorecard
           </span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">
@@ -59,27 +60,27 @@ export default function Header() {
             {dropdownOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 bg-white rounded-[var(--radius-md)] shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-[var(--gray-200)] py-1.5 z-50">
                 {categories.map((cat) => (
-                  <a
+                  <Link
                     key={cat.href}
                     href={cat.href}
                     className="block px-4 py-2.5 text-[13px] text-[var(--foreground)] hover:bg-[var(--gray-50)] hover:text-[var(--primary)] transition-colors"
                   >
                     {cat.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
           </div>
 
-          <a href="/methodology" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">
+          <Link href="/methodology" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">
             Methodology
-          </a>
-          <a href="/about" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">
+          </Link>
+          <Link href="/about" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">
             About
-          </a>
-          <a href="/contact" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">
+          </Link>
+          <Link href="/contact" className="text-[13px] font-medium text-white/70 hover:text-white transition-colors">
             Contact
-          </a>
+          </Link>
         </nav>
 
         {/* Updated badge */}
@@ -111,20 +112,20 @@ export default function Header() {
         <div className="md:hidden border-t border-white/10 bg-[var(--primary)] px-5 py-4 space-y-1">
           <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2 pt-1">Categories</p>
           {categories.map((cat) => (
-            <a
+            <Link
               key={cat.href}
               href={cat.href}
               className="block text-[14px] font-medium text-white/80 hover:text-white py-1.5"
               onClick={() => setMenuOpen(false)}
             >
               {cat.label}
-            </a>
+            </Link>
           ))}
           <div className="border-t border-white/10 pt-3 mt-3 space-y-1">
             <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">More</p>
-            <a href="/methodology" className="block text-[14px] font-medium text-white/80 hover:text-white py-1.5" onClick={() => setMenuOpen(false)}>Methodology</a>
-            <a href="/about" className="block text-[14px] font-medium text-white/80 hover:text-white py-1.5" onClick={() => setMenuOpen(false)}>About</a>
-            <a href="/contact" className="block text-[14px] font-medium text-white/80 hover:text-white py-1.5" onClick={() => setMenuOpen(false)}>Contact</a>
+            <Link href="/methodology" className="block text-[14px] font-medium text-white/80 hover:text-white py-1.5" onClick={() => setMenuOpen(false)}>Methodology</Link>
+            <Link href="/about" className="block text-[14px] font-medium text-white/80 hover:text-white py-1.5" onClick={() => setMenuOpen(false)}>About</Link>
+            <Link href="/contact" className="block text-[14px] font-medium text-white/80 hover:text-white py-1.5" onClick={() => setMenuOpen(false)}>Contact</Link>
           </div>
         </div>
       )}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-export default function AuthorBio({ variant = "inline" }: { variant?: "inline" | "full" }) {
-  const VerifiedBadge = () => (
+function VerifiedBadge() {
+  return (
     <svg viewBox="0 0 24 24" className="w-4 h-4 text-[var(--primary)]" fill="currentColor">
       <path
         fillRule="evenodd"
@@ -10,6 +10,9 @@ export default function AuthorBio({ variant = "inline" }: { variant?: "inline" |
       />
     </svg>
   );
+}
+
+export default function AuthorBio({ variant = "inline" }: { variant?: "inline" | "full" }) {
 
   if (variant === "inline") {
     return (

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -62,7 +63,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <p>
                 Trusted Scorecard earns a commission when you make a purchase through an affiliate link. This does not increase the price you pay, and it does not influence our editorial scores or rankings. See our{" "}
-                <a href="/methodology" className="text-[var(--primary)] hover:underline">methodology</a> for more on editorial independence.
+                <Link href="/methodology" className="text-[var(--primary)] hover:underline">methodology</Link> for more on editorial independence.
               </p>
             </section>
 
@@ -100,7 +101,7 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p className="mt-3">
                 To exercise any of these rights, please{" "}
-                <a href="/contact" className="text-[var(--primary)] hover:underline">contact us</a> with your request. We will respond within 30 days.
+                <Link href="/contact" className="text-[var(--primary)] hover:underline">contact us</Link> with your request. We will respond within 30 days.
               </p>
             </section>
 
@@ -117,7 +118,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-xl font-bold text-[var(--foreground)] mb-3">7. Contact Us</h2>
               <p>
                 If you have questions about this Privacy Policy or how we handle your data, please{" "}
-                <a href="/contact" className="text-[var(--primary)] hover:underline font-medium">contact us</a>.
+                <Link href="/contact" className="text-[var(--primary)] hover:underline font-medium">contact us</Link>.
                 We&apos;re happy to help.
               </p>
             </section>

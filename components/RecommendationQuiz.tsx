@@ -205,7 +205,7 @@ export default function RecommendationQuiz({ config }: { config: CategoryConfig 
           Not sure which {config.title.toLowerCase()} is right for you?
         </h2>
         <p className="mx-auto mb-6 max-w-md text-base opacity-90">
-          Answer 4 quick questions and we'll match you with the best option based on your needs.
+          Answer 4 quick questions and we&apos;ll match you with the best option based on your needs.
         </p>
         <button onClick={handleStart} className="btn-cta px-8 py-3.5 text-base" aria-label="Start the recommendation quiz">
           Take Our 60-Second Quiz
@@ -349,7 +349,7 @@ export default function RecommendationQuiz({ config }: { config: CategoryConfig 
       <div className="rounded-xl bg-[var(--gray-50)] p-6 text-center">
         {emailSubmitted ? (
           <p className="font-semibold text-[var(--success)]">
-            Thanks! We'll send your personalized results shortly.
+            Thanks! We&apos;ll send your personalized results shortly.
           </p>
         ) : (
           <>

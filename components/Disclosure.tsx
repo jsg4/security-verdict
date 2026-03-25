@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Disclosure() {
   return (
     <div className="max-w-[var(--content-width)] mx-auto px-5 py-3">
@@ -7,9 +9,9 @@ export default function Disclosure() {
         </svg>
         <p className="text-[12px] text-[var(--gray-500)] leading-relaxed">
           Our editors independently test and rate products. We may earn a commission from links on this page, which doesn&apos;t influence our ratings.{" "}
-          <a href="/methodology" className="text-[var(--primary)] font-medium hover:underline">
+          <Link href="/methodology" className="text-[var(--primary)] font-medium hover:underline">
             How we make money
-          </a>
+          </Link>
           .
         </p>
       </div>

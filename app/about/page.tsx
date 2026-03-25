@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OrganizationSchema from "@/components/OrganizationSchema";
@@ -161,7 +162,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-bold text-[var(--foreground)] mb-2">Transparency</h3>
                 <p className="text-sm text-[var(--gray-600)] leading-relaxed">
                   Our scoring criteria are published openly on our{" "}
-                  <a href="/methodology" className="text-[var(--primary)] hover:underline font-medium">methodology page</a>. You can see exactly how we weight each factor — and why. We re-evaluate all reviews quarterly so scores stay current.
+                  <Link href="/methodology" className="text-[var(--primary)] hover:underline font-medium">methodology page</Link>. You can see exactly how we weight each factor — and why. We re-evaluate all reviews quarterly so scores stay current.
                 </p>
               </div>
             </div>
@@ -214,12 +215,12 @@ export default function AboutPage() {
             <p className="text-[var(--gray-600)] mb-6 max-w-md mx-auto">
               Whether you want to suggest a product, flag an inaccuracy, or explore a partnership — we&apos;d love to hear from you.
             </p>
-            <a
+            <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-[var(--primary)] text-white font-semibold px-7 py-3 rounded-[var(--radius-md)] hover:bg-[var(--accent)] transition-colors"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </section>
       </main>

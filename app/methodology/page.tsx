@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getAllCategories } from "@/data/categories";
@@ -242,9 +243,9 @@ export default function MethodologyPage() {
             </p>
             <p className="text-[var(--gray-700)] leading-relaxed">
               If you believe a review contains an error or conflict of interest, please{" "}
-              <a href="/contact" className="text-[var(--primary)] hover:underline font-medium">contact us</a>.
+              <Link href="/contact" className="text-[var(--primary)] hover:underline font-medium">contact us</Link>.
               We take corrections seriously and publish amendments promptly. Learn more about our team on our{" "}
-              <a href="/about" className="text-[var(--primary)] hover:underline font-medium">About page</a>.
+              <Link href="/about" className="text-[var(--primary)] hover:underline font-medium">About page</Link>.
             </p>
           </section>
 

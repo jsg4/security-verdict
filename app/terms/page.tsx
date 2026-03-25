@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -55,7 +56,7 @@ export default function TermsPage() {
               </p>
               <p>
                 Our affiliate relationships do not influence our editorial scores, rankings, or recommendations. Products are evaluated objectively based on criteria published on our{" "}
-                <a href="/methodology" className="text-[var(--primary)] hover:underline">methodology page</a>.
+                <Link href="/methodology" className="text-[var(--primary)] hover:underline">methodology page</Link>.
                 A disclosure notice is displayed on all pages that contain affiliate links.
               </p>
             </section>
@@ -103,7 +104,7 @@ export default function TermsPage() {
               <h2 className="text-xl font-bold text-[var(--foreground)] mb-3">8. Contact</h2>
               <p>
                 If you have questions about these Terms of Service, please{" "}
-                <a href="/contact" className="text-[var(--primary)] hover:underline font-medium">contact us</a>.
+                <Link href="/contact" className="text-[var(--primary)] hover:underline font-medium">contact us</Link>.
               </p>
             </section>
           </div>

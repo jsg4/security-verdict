@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -27,10 +29,10 @@ export default function Footer() {
           <div>
             <p className="font-semibold text-white mb-3 uppercase tracking-widest text-[10px]">Categories</p>
             <ul className="space-y-2">
-              <li><a href="/identity-protection" className="hover:text-white transition-colors">Identity Protection</a></li>
-              <li><a href="/business-formation" className="hover:text-white transition-colors">Business Formation</a></li>
-              <li><a href="/online-therapy" className="hover:text-white transition-colors">Online Therapy</a></li>
-              <li><a href="/website-builders" className="hover:text-white transition-colors">Website Builders</a></li>
+              <li><Link href="/identity-protection" className="hover:text-white transition-colors">Identity Protection</Link></li>
+              <li><Link href="/business-formation" className="hover:text-white transition-colors">Business Formation</Link></li>
+              <li><Link href="/online-therapy" className="hover:text-white transition-colors">Online Therapy</Link></li>
+              <li><Link href="/website-builders" className="hover:text-white transition-colors">Website Builders</Link></li>
             </ul>
           </div>
 
@@ -38,8 +40,8 @@ export default function Footer() {
           <div>
             <p className="font-semibold text-white mb-3 uppercase tracking-widest text-[10px]">Resources</p>
             <ul className="space-y-2">
-              <li><a href="/methodology" className="hover:text-white transition-colors">Methodology</a></li>
-              <li><a href="/methodology#faq" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><Link href="/methodology" className="hover:text-white transition-colors">Methodology</Link></li>
+              <li><Link href="/methodology#faq" className="hover:text-white transition-colors">FAQ</Link></li>
               <li><a href="#newsletter" className="hover:text-white transition-colors">Newsletter</a></li>
             </ul>
           </div>
@@ -48,9 +50,9 @@ export default function Footer() {
           <div>
             <p className="font-semibold text-white mb-3 uppercase tracking-widest text-[10px]">Legal</p>
             <ul className="space-y-2">
-              <li><a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="/methodology" className="hover:text-white transition-colors">Affiliate Disclosure</a></li>
+              <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+              <li><Link href="/methodology" className="hover:text-white transition-colors">Affiliate Disclosure</Link></li>
             </ul>
           </div>
 
@@ -58,9 +60,9 @@ export default function Footer() {
           <div>
             <p className="font-semibold text-white mb-3 uppercase tracking-widest text-[10px]">Company</p>
             <ul className="space-y-2">
-              <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
-              <li><a href="/about#standards" className="hover:text-white transition-colors">Editorial Standards</a></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/about#standards" className="hover:text-white transition-colors">Editorial Standards</Link></li>
             </ul>
           </div>
         </div>
