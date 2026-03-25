@@ -7,8 +7,6 @@ export interface Product {
   stars: number;
   reviewCount: string;
   ratingLabel: string;
-  discount?: string;
-  badge?: string;
   tagline: string;
   url: string;
   ctaText: string;
@@ -27,13 +25,18 @@ export interface Product {
   specs: Record<string, string | boolean | number>;
   // New CRO fields
   phone?: string;
-  promoCode?: string;
   weeklyVisitors?: string;
   externalReviewCount?: string;
   externalReviewSource?: string;
-  bestFor?: string;
-  scoreBreakdown?: { label: string; score: number }[];
+  bestFor: string;
+  scoreBreakdown: { label: string; score: number }[];
   useCases?: string[];
+  deal?: {
+    text: string;
+    active: boolean;
+    promoCode?: string;  // migrated from top-level promoCode field
+  };
+  expertTake?: string;
 }
 
 export interface ComparisonRow {
