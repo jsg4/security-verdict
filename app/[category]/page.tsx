@@ -9,7 +9,6 @@ import CategoryShowcase from "@/components/CategoryShowcase";
 import CategoryTableOfContents from "@/components/CategoryTableOfContents";
 import CategoryReview from "@/components/CategoryReview";
 import QuickCompare from "@/components/QuickCompare";
-import PromoBanner from "@/components/PromoBanner";
 import CategoryComparisonTable from "@/components/CategoryComparisonTable";
 import CategoryBanner from "@/components/CategoryBanner";
 import CategoryTestimonials from "@/components/CategoryTestimonials";
@@ -19,6 +18,7 @@ import CategoryAuthor from "@/components/CategoryAuthor";
 import CategoryFAQ from "@/components/CategoryFAQ";
 import RecommendationQuiz from "@/components/RecommendationQuiz";
 import EmailCapture from "@/components/EmailCapture";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Footer from "@/components/Footer";
@@ -52,22 +52,19 @@ export default async function CategoryPage({ params }: Props) {
   const config = getCategory(category);
   if (!config) notFound();
 
-  // Insert promo banner after product #3 (GAP #5)
-  const promoProduct = config.products[0];
-
   return (
     <>
       <SchemaMarkup config={config} />
       <Header />
       <main className="flex-1">
+        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: config.title }]} />
         <CategoryHero config={config} />
         <CategorySocialProof config={config} />
-        <Disclosure />
         <div className="max-w-[var(--content-width)] mx-auto px-5 py-6">
           <RecommendationQuiz config={config} />
         </div>
+        <Disclosure />
         <CategoryTopPicks config={config} />
-        <EmailCapture config={config} />
         <CategoryShowcase config={config} />
         <QuickCompare products={config.products} />
         <CategoryTableOfContents config={config} />
@@ -77,10 +74,11 @@ export default async function CategoryPage({ params }: Props) {
           </h2>
           {config.products.map((product, i) => (
             <div key={product.slug}>
-              <CategoryReview product={product} rank={i + 1} />
-              {/* GAP #5: Promo banner between product #3 and #4 */}
+              <CategoryReview product={product} rank={i + 1} authorName={config.author.name} authorPhoto={config.author.photo} />
               {i === 2 && config.products.length > 3 && (
-                <PromoBanner product={promoProduct} />
+                <div className="my-6">
+                  <EmailCapture config={config} />
+                </div>
               )}
             </div>
           ))}
