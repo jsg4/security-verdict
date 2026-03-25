@@ -3,7 +3,7 @@ import { CategoryConfig } from "@/data/types";
 
 export default function CategoryHero({ config }: { config: CategoryConfig }) {
   return (
-    <section className="bg-gradient-to-b from-[var(--primary-light)] to-white pt-8 pb-6 md:pt-12 md:pb-8">
+    <section className="bg-gradient-to-b from-[var(--primary-light)] to-white pt-4 pb-6 md:pt-8 md:pb-8">
       <div className="max-w-[var(--content-width)] mx-auto px-5">
         {/* Independently Reviewed badge + aggregate rating */}
         <div className="flex flex-wrap items-center gap-3 mb-5">
